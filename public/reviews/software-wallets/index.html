@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 软件钱包横评：6 款热门热钱包对比 | Best Software Wallets 2026</title>
+<meta name="description" content="2026年6款软件钱包横评：Rabby、OKX Wallet、Bitget Wallet、MetaMask、Phantom、Trust Wallet。加权评分、内置swap费率对比、签名安全深评，中英双语。">
+<meta name="keywords" content="软件钱包,热钱包,software wallet,Rabby,MetaMask,Phantom,Trust Wallet,2026最佳软件钱包">
+<link rel="canonical" href="https://aiee.duckdns.org/reviews/software-wallets/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026 软件钱包横评：6 款热门热钱包对比">
+<meta property="og:description" content="Rabby / OKX Wallet / Bitget Wallet / MetaMask / Phantom / Trust Wallet —— 加权评分 + swap 费率真相 + 签名安全深评。">
+<meta property="og:url" content="https://aiee.duckdns.org/reviews/software-wallets/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"热钱包和冷钱包应该怎么分工？","acceptedAnswer":{"@type":"Answer","text":"热钱包（软件钱包）负责日常交互：转账、DeFi、空投、NFT，只放小额和常用资金；冷钱包（硬件钱包）负责长期囤币，大额资产永远离线。被盗案例里九成以上丢的是热钱包里的钱。"}},
+{"@type":"Question","name":"软件钱包内置 swap 的费率到底收在哪里？","acceptedAnswer":{"@type":"Answer","text":"收在兑换汇率里，不单独列账单。Rabby 0 费用，Trust Wallet 约 0.7%，Phantom 0.85%，MetaMask 0.875%（六款里最高）。单笔几百美元以上建议走外部聚合器，能省下一顿饭钱。"}},
+{"@type":"Question","name":"Trust Wallet 圣诞插件事故之后，现在安全吗？","acceptedAnswer":{"@type":"Answer","text":"2025-12-24 的事故是供应链攻击：泄露的发布密钥被用来推送投毒的浏览器插件 v2.68，约 700 万美元、2596 个钱包被盗；官方已回滚到 v2.69、移动端全程不受影响，并承诺全额赔付（截至 2026-10-07 赔付进行中）。这是发布流程事故，不是密码学缺陷；插件用户请确认已升级到 v2.69 以上。"}},
+{"@type":"Question","name":"Rabby 的“交易预执行模拟”到底是什么？","acceptedAnswer":{"@type":"Answer","text":"在你点“确认”之前，Rabby 先在本地模拟这笔交易，用 plain-English 告诉你：哪些代币会转出、转给谁、余额会变成多少、有没有可疑授权，并给出风险评级。MetaMask 只显示 gas 和合约地址，看不到滑点后的实际到账——这就是 DeFi 用户迁移到 Rabby 的核心原因。"}},
+{"@type":"Question","name":"软件钱包需要 KYC 吗？","acceptedAnswer":{"@type":"Answer","text":"六款都不需要 KYC：下载即用，助记词本地生成。但注意，钱包内置的法币入金通道（on-ramp）是第三方服务，走那条路买币仍然要 KYC。"}},
+{"@type":"Question","name":"本篇评分是怎么算出来的？","acceptedAnswer":{"@type":"Answer","text":"采用加权评分：安全性35%、易用性20%、内置费用15%、开源透明度15%、中文支持15%。数据整理于2026-10-07，为公开参数横评，非上手实测；费率与功能以官网实时为准。"}}
+]}
+</script>
+<style>
+:root{--bg:#0b0f1a;--card:#141b2e;--line:#24304d;--txt:#e8ecf5;--mut:#9aa6c0;--acc:#f5a623;--grn:#22c55e;--blu:#3b82f6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Inter,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+nav{border-bottom:1px solid var(--line);padding:14px 0;position:sticky;top:0;background:rgba(11,15,26,.94);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px;color:#fff;text-decoration:none}
+.langbtn{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:20px;padding:6px 16px;cursor:pointer;font-size:14px}
+.hero{padding:52px 0 26px;text-align:center}
+.hero h1{font-size:clamp(26px,5vw,42px);font-weight:800;margin-bottom:12px}
+.hero p{color:var(--mut);max-width:760px;margin:0 auto 14px}
+.updated{display:inline-block;background:#1a2340;border:1px solid var(--line);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--mut)}
+.disc{background:#0f1526;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:24px 0;font-size:14px;color:var(--mut)}
+.disc b{color:var(--acc)}
+h2.sec{font-size:24px;margin:38px 0 6px}
+p.secsub{color:var(--mut);margin-bottom:18px;font-size:15px}
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:14px}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.pick .k{font-size:13px;color:var(--acc);font-weight:700}
+.pick .v{font-size:18px;font-weight:800;margin-top:4px}
+.pick p{font-size:13px;color:var(--mut);margin-top:6px}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;margin-top:14px;background:var(--card);border-radius:12px;overflow:hidden}
+table.cmp th,table.cmp td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.cmp th{background:#1a2340;color:var(--acc);font-size:13px;white-space:nowrap}
+table.cmp tr:last-child td{border-bottom:none}
+.score{display:inline-block;background:var(--grn);color:#04120a;font-weight:800;border-radius:8px;padding:2px 10px}
+.review{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin:22px 0}
+.review h3{font-size:22px;margin-bottom:4px}
+.rank{font-size:13px;color:var(--mut);margin-bottom:12px}
+.scorebox{background:#0f1526;border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:14px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.scorebox .big{font-size:34px;font-weight:800;color:var(--grn)}
+.scorebox .lbl{font-size:13px;color:var(--mut)}
+.specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:12px 0;font-size:14px}
+.specs div{background:#0f1526;border-radius:8px;padding:8px 12px}
+.specs b{color:var(--acc);font-size:12px;display:block}
+.review h4{color:var(--acc);font-size:16px;margin:16px 0 6px}
+.review ul{margin-left:20px;font-size:14px;color:#cdd6ea}
+.review li{margin-bottom:5px}
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.rec div{border-radius:10px;padding:12px 16px;font-size:14px}
+.rec .yes{background:#0f2a1a;border:1px solid #14532d}
+.rec .no{background:#2a1215;border:1px solid #7f1d1d}
+.rec b{display:block;margin-bottom:4px}
+.btn{display:inline-block;margin-top:14px;margin-right:10px;padding:10px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;background:var(--blu);color:#fff}
+.btn.aff{background:#14532d}
+.method{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:8px}
+.method table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+.method th,.method td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+.method th{color:var(--acc)}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:16px 18px}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:8px;color:#cdd6ea;font-size:14px}
+.hub{background:linear-gradient(135deg,#1a2340,#0f2a1a);border:1px solid var(--line);border-radius:14px;padding:24px;margin:34px 0}
+.hub a{color:var(--acc)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:var(--mut);font-size:13px}
+footer a{color:var(--acc);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+.warn{background:#2a1a0f;border:1px solid #7f4d1d;border-radius:12px;padding:16px 20px;margin:20px 0;font-size:14px;color:#e8d5b5}
+.warn b{color:var(--acc)}
+html[lang="en"] .zh{display:none!important}
+html:not([lang="en"]) .en{display:none!important}
+@media(max-width:640px){.rec{grid-template-columns:1fr}table.cmp{font-size:12px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="/">🧭 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span></a>
+<button class="langbtn" onclick="toggleLang()">EN / 中文</button>
+</div></nav>
+<div class="wrap">
+
+<div class="disc"><span class="zh"><b>信息披露：</b>本篇含 <b>OKX 交易所返佣链接</b>（通过链接开户，本站可获得佣金，你的费率不受影响）；各钱包下载按钮均为官网直达，<b>无钱包返佣</b>。评分基于公开参数与加权方法，<b>非上手实测</b>；费率与功能以官网实时为准。</span><span class="en"><b>Disclosure:</b> this review contains an <b>OKX exchange referral link</b> (sign-ups earn us a commission at no extra cost to you); all wallet download buttons link to official sites with <b>no wallet affiliate</b>. Scores use public specs and our weighted methodology — <b>not hands-on tested</b>; rates and features per official sites.</span></div>
+
+<div class="hero">
+<h1><span class="zh">2026 软件钱包横评：6 款热门热钱包</span><span class="en">Best Software Wallets 2026: 6-Way Showdown</span></h1>
+<p><span class="zh">软件钱包是你每天真正会打开的东西：转账、DeFi、空投、NFT。六款安装全免费，真正的费用藏在内置 swap 的汇率里；最大的安全分水岭不是品牌，而是“签名可见性”——签名前你到底能看清多少钱、转给谁。Trust Wallet 2025 年圣诞插件供应链事故是过去一年最大的钱包安全事件，本篇如实披露，不回避。</span><span class="en">Software wallets are what you actually open every day: transfers, DeFi, airdrops, NFTs. All six are free to install — the real cost hides in the built-in swap exchange rate. The biggest security divide isn't the brand, it's "signature visibility": how clearly you can see the amount and recipient before you sign. The Trust Wallet Christmas 2025 supply-chain incident was the year's biggest wallet security event; we disclose it fully, no whitewashing.</span></p>
+<span class="updated"><span class="zh">数据整理于 2026-10-07 · 参数横评（非实测）</span><span class="en">Data compiled 2026-10-07 · Spec-based comparison (not hands-on)</span></span>
+</div>
+
+<h2 class="sec"><span class="zh">⚡ 快速推荐</span><span class="en">⚡ Quick Picks</span></h2>
+<div class="picks">
+<div class="pick"><div class="k"><span class="zh">最佳综合</span><span class="en">Best overall</span></div><div class="v">Rabby <span class="score">8.9</span></div><p><span class="zh">DeFi 安全之王：交易预执行模拟 + 0 swap 费用，重度用户闭眼选。</span><span class="en">The DeFi security king: pre-execution simulation + zero swap fees.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">最适合华人</span><span class="en">Best for Chinese users</span></div><div class="v">OKX Wallet <span class="score">8.6</span></div><p><span class="zh">130+ 链 + DEX 聚合 + 交易所生态联动，中文满分。</span><span class="en">130+ chains, DEX aggregation, exchange ecosystem — perfect Chinese support.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">中文区之选</span><span class="en">Chinese-community pick</span></div><div class="v">Bitget Wallet <span class="score">8.3</span></div><p><span class="zh">130+ 网络，中文运营最重度，MPC + 4 亿美元保障基金。</span><span class="en">130+ networks, heaviest Chinese-language ops, MPC + $400M protection fund.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">dApp 兼容之王</span><span class="en">dApp compatibility king</span></div><div class="v">MetaMask <span class="score">8.2</span></div><p><span class="zh">EVM 默认入口，兼容性无人能敌，但 swap 费六款最高。</span><span class="en">The default EVM gateway with unmatched compatibility — but the highest swap fee of the six.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">Solana 用户必备</span><span class="en">Essential for Solana users</span></div><div class="v">Phantom <span class="score">8.1</span></div><p><span class="zh">Solana 体验仍是最强；“多链”是精选多链，EVM 用户别选。</span><span class="en">Still the best Solana experience; "multi-chain" means curated chains — EVM users look elsewhere.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">覆盖最广</span><span class="en">Widest coverage</span></div><div class="v">Trust Wallet <span class="score">7.6</span></div><p><span class="zh">币安系，移动端多链覆盖最广；圣诞供应链事故扣分，插件用户先确认已升级。</span><span class="en">Binance-backed with the widest mobile multi-chain coverage; docked for the Christmas supply-chain incident.</span></p></div>
+</div>
+
+<h2 class="sec"><span class="zh">📊 对比总表</span><span class="en">📊 Comparison Table</span></h2>
+<table class="cmp">
+<tr><th><span class="zh">产品</span><span class="en">Product</span></th><th><span class="zh">内置 swap 费率</span><span class="en">Built-in swap fee</span></th><th><span class="zh">平台</span><span class="en">Platforms</span></th><th><span class="zh">开源</span><span class="en">Open source</span></th><th><span class="zh">链覆盖</span><span class="en">Chain coverage</span></th><th><span class="zh">评分</span><span class="en">Score</span></th></tr>
+<tr><td><b>Rabby</b></td><td><span class="zh">0 费用</span><span class="en">Zero fee</span></td><td><span class="zh">浏览器插件 + 桌面端 + 移动端</span><span class="en">Extension + desktop + mobile</span></td><td><span class="zh">是（MIT）</span><span class="en">Yes (MIT)</span></td><td><span class="zh">100+ EVM 链</span><span class="en">100+ EVM chains</span></td><td><span class="score">8.9</span></td></tr>
+<tr><td><b>OKX Wallet</b></td><td><span class="zh">0（聚合器比价）</span><span class="en">0 (aggregator pricing)</span></td><td><span class="zh">移动端 + 浏览器插件</span><span class="en">Mobile + extension</span></td><td><span class="zh">否</span><span class="en">No</span></td><td><span class="zh">130+ 区块链</span><span class="en">130+ blockchains</span></td><td><span class="score">8.6</span></td></tr>
+<tr><td><b>Bitget Wallet</b></td><td><span class="zh">0（聚合比价）</span><span class="en">0 (aggregator pricing)</span></td><td><span class="zh">移动端 + Chrome 插件 + Web</span><span class="en">Mobile + Chrome ext + web</span></td><td><span class="zh">否</span><span class="en">No</span></td><td><span class="zh">130+ 网络</span><span class="en">130+ networks</span></td><td><span class="score">8.3</span></td></tr>
+<tr><td><b>MetaMask</b></td><td><span class="zh">0.875%（六款最高）</span><span class="en">0.875% (highest of six)</span></td><td><span class="zh">浏览器插件 + 移动端</span><span class="en">Extension + mobile</span></td><td><span class="zh">是</span><span class="en">Yes</span></td><td><span class="zh">EVM + BTC / SOL / TRON</span><span class="en">EVM + BTC / SOL / TRON</span></td><td><span class="score">8.2</span></td></tr>
+<tr><td><b>Phantom</b></td><td><span class="zh">0.85%（藏在汇率里）</span><span class="en">0.85% (in the rate)</span></td><td><span class="zh">浏览器插件 + 移动端</span><span class="en">Extension + mobile</span></td><td><span class="zh">否（核心闭源）</span><span class="en">No (core closed)</span></td><td><span class="zh">8 条精选链</span><span class="en">8 curated chains</span></td><td><span class="score">8.1</span></td></tr>
+<tr><td><b>Trust Wallet</b></td><td><span class="zh">约 0.7%（含在汇率里）</span><span class="en">~0.7% (in the rate)</span></td><td><span class="zh">移动端 + 浏览器插件</span><span class="en">Mobile + extension</span></td><td><span class="zh">部分（Wallet Core MIT）</span><span class="en">Partial (Wallet Core MIT)</span></td><td><span class="zh">100+ 区块链</span><span class="en">100+ blockchains</span></td><td><span class="score">7.6</span></td></tr>
+</table>
+<p class="note"><span class="zh">费率为各官网 2026-10-07 前后公开口径，常有调整；swap 抽成藏在汇率里，不单独列账单，大额兑换前请以实时报价为准。</span><span class="en">Fees are public figures from official sites around 2026-10-07 and change often; swap markups hide in the quoted rate rather than a separate bill — verify the live quote for large swaps.</span></p>
+
+<div class="warn"><span class="zh"><b>⚠️ 费用真相：</b>六款安装全免费，真正的费用是内置 swap 抽成 —— Rabby 0 / Trust ~0.7% / Phantom 0.85% / MetaMask 0.875%（最高）。单笔几百美元以上的兑换，建议走外部聚合器比价，能省下一顿饭钱。</span><span class="en"><b>⚠️ Fee reality:</b> all six are free to install — the real cost is the built-in swap markup: Rabby 0 / Trust ~0.7% / Phantom 0.85% / MetaMask 0.875% (highest). For swaps over a few hundred dollars, route through an external aggregator and save yourself a dinner.</span></div>
+
+<h2 class="sec"><span class="zh">🔎 逐款深评</span><span class="en">🔎 In-Depth Reviews</span></h2>
+
+<div class="review">
+<h3>1. Rabby Wallet</h3><div class="rank"><span class="zh">综合排名 #1 · DeFi 安全之王</span><span class="en">Overall #1 · The DeFi security king</span></div>
+<div class="scorebox"><div><div class="big">8.9</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 9.5 · 易用 8.5 · 费用 9.0 · 开源 9.0 · 中文 8.0</span><span class="en">Security 9.5 · Usability 8.5 · Fees 9.0 · Openness 9.0 · Chinese 8.0</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">DeFi 重度用户</span><span class="en">DeFi power users</span></div>
+<div><b>Fee</b><span class="zh">免费；swap 0 费用</span><span class="en">Free; zero swap fee</span></div>
+<div><b>Type</b><span class="zh">浏览器插件 + 桌面端 + 移动端</span><span class="en">Extension + desktop + mobile</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b>MIT</div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">交易预执行模拟 · plain-English 签名解析 · 400 万+安装</span><span class="en">Pre-execution simulation · plain-English signature parsing · 4M+ installs</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh"><strong>交易预执行模拟</strong>：点“确认”之前，Rabby 先在本地模拟这笔交易，用 plain-English 告诉你哪些代币会转出、转给谁、余额变成多少、有没有可疑授权，并给出风险评级。</span><span class="en"><strong>Pre-execution simulation</strong>: before you confirm, Rabby simulates the transaction locally and tells you in plain English which tokens leave, where they go, what your balance becomes, and whether any approval looks suspicious — with a risk rating.</span></li>
+<li><span class="zh">内置 swap <strong>0 费用</strong>，六款里唯一不抽成的。</span><span class="en"><strong>Zero</strong> built-in swap fee — the only one of the six that takes no cut.</span></li>
+<li><span class="zh">DeBank 出品，中文文档齐全，100+ EVM 链自动识别切换。</span><span class="en">Built by DeBank with complete Chinese docs; auto-detects and switches across 100+ EVM chains.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh">签名可见性是代差级的：MetaMask 只给你 gas 和合约地址，Rabby 让你看到滑点后的实际到账。这是 DeFi 用户从 MetaMask 迁移到 Rabby 的核心原因，也是本篇“安全 35%”权重下它拿高分的主因。</span><span class="en">The signature-visibility gap is generational: MetaMask shows you gas and a contract address; Rabby shows the actual post-slippage outcome. That's the core reason DeFi users migrate from MetaMask to Rabby — and the main driver of its score under our 35% security weight.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">玩 DeFi 的人，这就是 2026 年的默认答案。可以和 MetaMask 共存：Rabby 负责签名把关。</span><span class="en">For DeFi users, this is the 2026 default. It coexists fine with MetaMask — let Rabby guard your signatures.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">DeFi 重度用户、被钓鱼搞怕过的人、多链 EVM 玩家</span><span class="en">DeFi power users, anyone burned by phishing, multi-chain EVM users</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">只玩 Solana 生态、完全不碰 EVM 的人</span><span class="en">Solana-only users who never touch EVM chains</span></div></div>
+<a class="btn" href="https://rabby.io" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+</div>
+
+<div class="review">
+<h3>2. OKX Wallet</h3><div class="rank"><span class="zh">综合排名 #2 · 最适合华人</span><span class="en">Overall #2 · Best for Chinese users</span></div>
+<div class="scorebox"><div><div class="big">8.6</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 9.0 · 易用 9.0 · 费用 8.5 · 开源 6.0 · 中文 10</span><span class="en">Security 9.0 · Usability 9.0 · Fees 8.5 · Openness 6.0 · Chinese 10</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">华人多链用户</span><span class="en">Chinese multi-chain users</span></div>
+<div><b>Fee</b><span class="zh">免费；聚合器比价 0 抽成</span><span class="en">Free; aggregator pricing, no markup</span></div>
+<div><b>Type</b><span class="zh">移动端 + 浏览器插件（无桌面端）</span><span class="en">Mobile + extension (no desktop)</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b><span class="zh">否</span><span class="en">No</span></div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">130+ 链 · X Routing 聚合 400+ DEX · 交易所生态联动</span><span class="en">130+ chains · X Routing across 400+ DEXs · exchange ecosystem</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh"><strong>链覆盖 + 聚合最强</strong>：130+ 区块链，内置 X Routing 聚合 400+ DEX，兑换自动找最优路径，自己不抽成。</span><span class="en"><strong>Strongest chain coverage + aggregation</strong>: 130+ blockchains, built-in X Routing across 400+ DEXs finds the best path automatically, no markup taken.</span></li>
+<li><span class="zh">和 OKX 交易所生态联动最顺：出入金、划转、Web3 任务一气呵成。</span><span class="en">Smoothest OKX exchange integration: on/off-ramps, transfers and Web3 quests in one flow.</span></li>
+<li><span class="zh">中文支持六款里满分：界面、公告、客服全中文。</span><span class="en">Perfect Chinese support — the best of the six: UI, announcements and support all in Chinese.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh">交易所级安全团队背书，事故响应快；但核心闭源，可审计性不如 Rabby 和 MetaMask。</span><span class="en">Exchange-grade security team with fast incident response; but the closed core is less auditable than Rabby or MetaMask.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">华人用户的“全能钱包”：链多、中文好、兑换不抽成。唯一遗憾是没有桌面端。</span><span class="en">The all-rounder for Chinese users: many chains, great Chinese support, no swap markup. Only missing a desktop app.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">华人多链用户、OKX 交易所用户、撸空投党</span><span class="en">Chinese multi-chain users, OKX exchange users, airdrop farmers</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">坚持开源可审计、只用桌面端的人</span><span class="en">Open-source purists, desktop-only users</span></div></div>
+<a class="btn" href="https://web3.okx.com/" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+<a class="btn aff" href="https://www.mitnpkwxvfr.net/join/PFVFLPPF" target="_blank" rel="sponsored nofollow noopener">↗ <span class="zh">OKX 交易所开户（返佣链接）</span><span class="en">Open an OKX account (referral link)</span></a>
+</div>
+
+<div class="review">
+<h3>3. Bitget Wallet（前 BitKeep）</h3><div class="rank"><span class="zh">综合排名 #3 · 中文区之选</span><span class="en">Overall #3 · The Chinese-community pick</span></div>
+<div class="scorebox"><div><div class="big">8.3</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.5 · 易用 9.0 · 费用 8.5 · 开源 5.5 · 中文 9.5</span><span class="en">Security 8.5 · Usability 9.0 · Fees 8.5 · Openness 5.5 · Chinese 9.5</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">中文区活跃用户</span><span class="en">Active Chinese-community users</span></div>
+<div><b>Fee</b><span class="zh">免费；聚合比价 0 抽成</span><span class="en">Free; aggregator pricing, no markup</span></div>
+<div><b>Type</b><span class="zh">移动端 + Chrome 插件 + Web</span><span class="en">Mobile + Chrome ext + web</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b><span class="zh">否</span><span class="en">No</span></div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">130+ 网络 · 宣称 6000 万用户 · MPC + 4 亿美元 SAF 保障基金</span><span class="en">130+ networks · 60M claimed users · MPC + $400M SAF protection fund</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh">中文区运营最重度：中文教程、活动、客服响应快，新手引导做得最细。</span><span class="en">The heaviest Chinese-language operation: tutorials, campaigns and fast support — the most hand-holding onboarding.</span></li>
+<li><span class="zh"><strong>MPC 无私钥模式</strong>可选 + 4 亿美元 SAF 保障基金，对“怕丢助记词”的人友好。</span><span class="en">Optional <strong>MPC seedless mode</strong> plus a $400M SAF protection fund — friendly to anyone afraid of losing a seed phrase.</span></li>
+<li><span class="zh">三端覆盖（移动/插件/Web），设备之间切换顺滑。</span><span class="en">Three-platform coverage (mobile/extension/web) with smooth device switching.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh">MPC 分片降低了单点丢失风险，SAF 基金是行业里少见的赔付承诺；但闭源 + 交易所系，透明度与去信任化程度不及开源钱包。</span><span class="en">MPC sharding lowers single-point loss risk and the SAF fund is a rare payout commitment; but closed-source and exchange-backed, so less transparent and trustless than open wallets.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">中文新手村村长：怕丢助记词、要中文手把手教学，选它没错。</span><span class="en">The village chief for Chinese beginners: afraid of seed phrases and want hand-holding in Chinese — this is it.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">中文新手、怕丢助记词的人、Bitget 交易所用户</span><span class="en">Chinese beginners, the seed-phrase-anxious, Bitget exchange users</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">开源信仰者、坚持“not your keys”纯粹主义的人</span><span class="en">Open-source advocates, "not your keys" purists</span></div></div>
+<a class="btn" href="https://web3.bitget.com" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+</div>
+
+<div class="review">
+<h3>4. MetaMask</h3><div class="rank"><span class="zh">综合排名 #4 · dApp 兼容之王</span><span class="en">Overall #4 · The dApp compatibility king</span></div>
+<div class="scorebox"><div><div class="big">8.2</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.0 · 易用 8.5 · 费用 6.5 · 开源 9.5 · 中文 8.5</span><span class="en">Security 8.0 · Usability 8.5 · Fees 6.5 · Openness 9.5 · Chinese 8.5</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">EVM 生态老用户</span><span class="en">EVM ecosystem veterans</span></div>
+<div><b>Fee</b><span class="zh">免费；内置 swap 0.875%（六款最高）</span><span class="en">Free; built-in swap 0.875% (highest of six)</span></div>
+<div><b>Type</b><span class="zh">浏览器插件 + 移动端</span><span class="en">Extension + mobile</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b><span class="zh">是</span><span class="en">Yes</span></div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">EVM 默认入口 · dApp 兼容性无人能敌</span><span class="en">The default EVM gateway · unmatched dApp compatibility</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh">做 dApp 先适配 MetaMask，再考虑别人——兼容性就是它的护城河。</span><span class="en">dApps integrate MetaMask first and everyone else second — compatibility is its moat.</span></li>
+<li><span class="zh">开源 + 庞大的开发者生态，出了问题全网都有人讨论解法。</span><span class="en">Open-source with a huge developer ecosystem — any problem you hit has been discussed somewhere.</span></li>
+<li><span class="zh">2025 年底补上了 BTC / SOL / TRON 支持，晚了 Trust Wallet 数年，但总算不再是纯 EVM 钱包。</span><span class="en">Added BTC / SOL / TRON support in late 2025 — years behind Trust Wallet, but no longer EVM-only.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh">短板恰恰在签名环节：没有交易预执行模拟，签名前只能看到 gas 和合约地址，看不到滑点后的实际到账——这正是它被 Rabby 抢走 DeFi 重度用户的原因。</span><span class="en">Its weak spot is exactly the signing step: no pre-execution simulation — before signing you see only gas and a contract address, not the post-slippage outcome. That's precisely why Rabby is poaching its DeFi power users.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">兼容性无可替代，但别用它的内置 swap（0.875% 六款最高），大额兑换走外部聚合器；DeFi 重度交互建议搭配 Rabby 把关签名。</span><span class="en">Irreplaceable for compatibility — but never use its built-in swap (0.875%, the highest of the six); route large swaps through an external aggregator, and let Rabby guard signatures for heavy DeFi use.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">EVM 老用户、开发者、需要最大 dApp 兼容的人</span><span class="en">EVM veterans, developers, anyone needing maximum dApp compatibility</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">频繁用内置 swap 的人、对签名安全焦虑的人（去看 Rabby）</span><span class="en">Frequent built-in-swap users, the signature-anxious (see Rabby)</span></div></div>
+<a class="btn" href="https://metamask.io" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+</div>
+
+<div class="review">
+<h3>5. Phantom</h3><div class="rank"><span class="zh">综合排名 #5 · Solana 用户必备</span><span class="en">Overall #5 · Essential for Solana users</span></div>
+<div class="scorebox"><div><div class="big">8.1</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.5 · 易用 10 · 费用 7.0 · 开源 6.0 · 中文 8.0</span><span class="en">Security 8.5 · Usability 10 · Fees 7.0 · Openness 6.0 · Chinese 8.0</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">Solana 生态用户</span><span class="en">Solana ecosystem users</span></div>
+<div><b>Fee</b><span class="zh">免费；内置 swap 0.85%（藏在汇率里）</span><span class="en">Free; built-in swap 0.85% (hidden in the rate)</span></div>
+<div><b>Type</b><span class="zh">浏览器插件 + 移动端</span><span class="en">Extension + mobile</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b><span class="zh">否（核心闭源；Wallet Core 库 MIT 开源）</span><span class="en">No (core closed; Wallet Core lib is MIT)</span></div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">Solana 体验最强 · Jupiter 聚合 · SOL 质押 · NFT</span><span class="en">Best Solana UX · Jupiter aggregation · SOL staking · NFTs</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh">Solana 交互体验仍是断层第一：Jupiter 聚合兑换、SOL 一键质押、NFT 展示，流畅度无人能及。</span><span class="en">Still tier-one for Solana: Jupiter aggregated swaps, one-tap SOL staking, NFT display — unmatched smoothness.</span></li>
+<li><span class="zh">从 Solana 起家扩展到 ETH / BTC / Base / Polygon / Sui / HyperEVM 等 8 条精选链。</span><span class="en">Grew from Solana to 8 curated chains including ETH, BTC, Base, Polygon, Sui and HyperEVM.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh">取舍要看清：核心闭源；不支持 BNB Chain / Arbitrum / Optimism 等主流 EVM 链，也没有自定义网络；2026-08-12 起停止支持 Monad——它的“多链”是精选多链，不是全覆盖。0.85% 的 swap 费藏在汇率里，不单独列出来。</span><span class="en">Know the tradeoffs: closed core; no support for major EVM chains like BNB Chain, Arbitrum or Optimism, and no custom networks; Monad support ended 2026-08-12 — its "multi-chain" is curated, not comprehensive. The 0.85% swap fee hides in the quoted rate.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">Solana 用户闭眼装；EVM 用户请绕道，它不是为你设计的。</span><span class="en">Solana users: install without thinking. EVM users: walk past — it wasn't built for you.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">Solana 生态用户、NFT 玩家、SOL 质押用户</span><span class="en">Solana ecosystem users, NFT collectors, SOL stakers</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">EVM 多链用户、需要自定义网络的人、开源信仰者</span><span class="en">EVM multi-chain users, custom-network users, open-source advocates</span></div></div>
+<a class="btn" href="https://phantom.com" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+</div>
+
+<div class="review">
+<h3>6. Trust Wallet</h3><div class="rank"><span class="zh">综合排名 #6 · 覆盖最广</span><span class="en">Overall #6 · Widest coverage</span></div>
+<div class="scorebox"><div><div class="big">7.6</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 6.5 · 易用 9.0 · 费用 8.0 · 开源 6.5 · 中文 9.0</span><span class="en">Security 6.5 · Usability 9.0 · Fees 8.0 · Openness 6.5 · Chinese 9.0</span></div></div>
+<div class="specs">
+<div><b>Best for</b><span class="zh">移动端多链用户</span><span class="en">Mobile multi-chain users</span></div>
+<div><b>Fee</b><span class="zh">免费；内置 swap 约 0.7%（含在汇率里）</span><span class="en">Free; built-in swap ~0.7% (in the rate)</span></div>
+<div><b>Type</b><span class="zh">移动端 + 浏览器插件</span><span class="en">Mobile + extension</span></div>
+<div><b><span class="zh">开源</span><span class="en">Open source</span></b><span class="zh">部分（Wallet Core MIT 开源）</span><span class="en">Partial (Wallet Core MIT)</span></div>
+<div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">币安系 · 100+ 区块链 · 宣称 2 亿用户</span><span class="en">Binance-backed · 100+ blockchains · 200M claimed users</span></div>
+</div>
+<h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
+<ul>
+<li><span class="zh">移动端多链覆盖六款里最广：100+ 区块链，长尾小币种基本都有。</span><span class="en">The widest mobile multi-chain coverage of the six: 100+ blockchains, long-tail tokens included.</span></li>
+<li><span class="zh">币安系背书，用户基数最大，新手教程和中文支持成熟。</span><span class="en">Binance backing, the largest user base, mature tutorials and Chinese support.</span></li>
+</ul>
+<h4><span class="zh">安全</span><span class="en">Security</span></h4>
+<ul><li><span class="zh"><strong>2025 年圣诞事故必须如实披露</strong>：2025-12-24，攻击者利用泄露的 GitHub secrets / Chrome Web Store API 密钥（Shai-Hulud 2.0 供应链攻击）发布了被投毒的浏览器插件 v2.68，收割助记词，约 700 万美元、2596 个钱包被盗。官方已回滚到 v2.69 并发布事故复盘，移动端全程不受影响，并承诺全额赔付（截至 2026-10-07 赔付进行中）。定性：这是<strong>发布流程 / 供应链事故，不是密码学缺陷</strong>；但它是过去一年最大的钱包安全事件，横评若回避则失信。插件用户请先确认已升级到 v2.69 以上。</span><span class="en"><strong>The Christmas 2025 incident must be disclosed as-is</strong>: on 2025-12-24, attackers used leaked GitHub secrets / Chrome Web Store API keys (the Shai-Hulud 2.0 supply-chain attack) to push a poisoned browser extension v2.68 that harvested seed phrases — about $7M stolen from 2,596 wallets. The team rolled back to v2.69 with a public post-mortem, mobile was never affected, and full reimbursement was promised (in progress as of 2026-10-07). To be clear: this was a <strong>release-pipeline / supply-chain failure, not a cryptographic flaw</strong> — but it was the year's biggest wallet security event, and omitting it would cost this review its credibility. Extension users: confirm you're on v2.69+ first.</span></li></ul>
+<h4><span class="zh">结论</span><span class="en">Bottom line</span></h4>
+<ul><li><span class="zh">移动端多链依然能打，但圣诞事故让它在本篇只能垫底。插件用户升级到 v2.69+ 之前，不要放任何资金进去。</span><span class="en">Still strong for mobile multi-chain — but the Christmas incident puts it last here. Extension users: don't fund it until you're on v2.69+.</span></li></ul>
+<div class="rec"><div class="yes"><b><span class="zh">✅ 适合</span><span class="en">✅ Good for</span></b><span class="zh">移动端多链用户、币安生态用户、长尾币种持有者</span><span class="en">Mobile multi-chain users, Binance ecosystem users, long-tail token holders</span></div><div class="no"><b><span class="zh">❌ 不适合</span><span class="en">❌ Not for</span></b><span class="zh">仍在用旧版插件的人、对供应链安全极度敏感的人</span><span class="en">Anyone still on the old extension, the supply-chain-paranoid</span></div></div>
+<a class="btn" href="https://trustwallet.com" target="_blank" rel="noopener">↗ <span class="zh">官网直达（非返佣）</span><span class="en">Official site (no affiliate)</span></a>
+</div>
+
+<h2 class="sec"><span class="zh">⚖️ 评分方法</span><span class="en">⚖️ Scoring Methodology</span></h2>
+<div class="method">
+<p><span class="zh">每款产品按五个维度加权打分（满分 10 分）。数据整理于 <b>2026-10-07</b>，费率与功能以官网实时为准。本篇为公开参数横评，<b>非上手实测</b>。与<a href="/reviews/hardware-wallets/" style="color:var(--acc)">硬件钱包横评</a>的分工：热钱包管日常交互，大额长期持有请看冷钱包。</span><span class="en">Each product is scored on five weighted dimensions (out of 10). Data compiled <b>2026-10-07</b>; rates and features per official sites. This is a spec-based comparison, <b>not hands-on testing</b>. Division of labor with our <a href="/reviews/hardware-wallets/" style="color:var(--acc)">hardware wallet showdown</a>: hot wallets for daily use, cold wallets for large long-term holdings.</span></p>
+<table>
+<tr><th><span class="zh">维度</span><span class="en">Dimension</span></th><th><span class="zh">权重</span><span class="en">Weight</span></th><th><span class="zh">考察点</span><span class="en">What we check</span></th></tr>
+<tr><td><span class="zh">安全性</span><span class="en">Security</span></td><td>35%</td><td><span class="zh">签名可见性、钓鱼防护、密钥管理、历史安全事件</span><span class="en">Signature visibility, phishing protection, key management, past incidents</span></td></tr>
+<tr><td><span class="zh">易用性</span><span class="en">Usability</span></td><td>20%</td><td><span class="zh">交互流畅度、多端覆盖、备份恢复流程</span><span class="en">Interaction smoothness, multi-platform coverage, backup/recovery flow</span></td></tr>
+<tr><td><span class="zh">内置费用</span><span class="en">Built-in fees</span></td><td>15%</td><td><span class="zh">内置 swap 抽成（藏在汇率里）</span><span class="en">Built-in swap markup (hidden in the rate)</span></td></tr>
+<tr><td><span class="zh">开源透明度</span><span class="en">Openness</span></td><td>15%</td><td><span class="zh">代码是否开源、可审计程度</span><span class="en">Whether code is open-source and auditable</span></td></tr>
+<tr><td><span class="zh">中文支持</span><span class="en">Chinese support</span></td><td>15%</td><td><span class="zh">中文界面、中文客服、中文社区资料</span><span class="en">Chinese UI, support and community resources</span></td></tr>
+</table>
+</div>
+
+<h2 class="sec"><span class="zh">❓ 常见问题</span><span class="en">❓ FAQ</span></h2>
+<div class="faq">
+<details><summary><span class="zh">热钱包和冷钱包应该怎么分工？</span><span class="en">How should hot and cold wallets divide the work?</span></summary><p><span class="zh">热钱包（软件钱包）负责日常交互：转账、DeFi、空投、NFT，只放小额和常用资金；冷钱包（硬件钱包）负责长期囤币，大额资产永远离线。被盗案例里九成以上丢的是热钱包里的钱 —— 具体选哪款冷钱包，看我们的<a href="/reviews/hardware-wallets/" style="color:var(--acc)">硬件钱包横评</a>。</span><span class="en">Hot wallets (software) handle daily activity — transfers, DeFi, airdrops, NFTs — holding only small, working amounts; cold wallets (hardware) hold long-term savings, with large assets always offline. Over 90% of theft cases lose hot-wallet funds — for picking a cold wallet, see our <a href="/reviews/hardware-wallets/" style="color:var(--acc)">hardware wallet showdown</a>.</span></p></details>
+<details><summary><span class="zh">软件钱包内置 swap 的费率到底收在哪里？</span><span class="en">Where does the built-in swap fee actually go?</span></summary><p><span class="zh">收在兑换汇率里，不单独列账单，所以很多人没意识到自己在付费。六款对比：Rabby 0 / Trust ~0.7% / Phantom 0.85% / MetaMask 0.875%（最高）。单笔几百美元以上，建议走外部聚合器比价。</span><span class="en">It's baked into the quoted exchange rate — no separate bill, so most people never notice they're paying. Across the six: Rabby 0 / Trust ~0.7% / Phantom 0.85% / MetaMask 0.875% (highest). For swaps over a few hundred dollars, compare on an external aggregator.</span></p></details>
+<details><summary><span class="zh">Trust Wallet 圣诞事故之后，现在安全吗？</span><span class="en">Is Trust Wallet safe now after the Christmas incident?</span></summary><p><span class="zh">2025-12-24 的攻击是供应链事故：泄露的发布密钥被用来推送投毒的浏览器插件 v2.68，约 700 万美元、2596 个钱包被盗；官方已回滚到 v2.69、移动端全程不受影响，并承诺全额赔付（截至 2026-10-07 赔付进行中）。这是发布流程事故，不是密码学缺陷。插件用户请确认已升级到 v2.69 以上再使用。</span><span class="en">The 2025-12-24 attack was a supply-chain incident: leaked release keys pushed a poisoned extension v2.68 — about $7M from 2,596 wallets. The team rolled back to v2.69, mobile was never affected, and full reimbursement was promised (in progress as of 2026-10-07). A pipeline failure, not a cryptographic flaw. Extension users: confirm v2.69+ before use.</span></p></details>
+<details><summary><span class="zh">Rabby 的“交易预执行模拟”到底是什么？</span><span class="en">What exactly is Rabby's pre-execution simulation?</span></summary><p><span class="zh">在你点“确认”之前，Rabby 先在本地模拟这笔交易，用 plain-English 告诉你：哪些代币会转出、转给谁、余额会变成多少、有没有可疑授权，并给出风险评级。MetaMask 只显示 gas 和合约地址，看不到滑点后的实际到账——这就是 DeFi 用户迁移到 Rabby 的核心原因。</span><span class="en">Before you confirm, Rabby simulates the transaction locally and tells you in plain English which tokens leave, where they go, what your balance becomes, and whether any approval looks suspicious — with a risk rating. MetaMask shows only gas and a contract address, never the post-slippage outcome. That's the core reason DeFi users migrate to Rabby.</span></p></details>
+<details><summary><span class="zh">软件钱包需要 KYC 吗？</span><span class="en">Do software wallets require KYC?</span></summary><p><span class="zh">六款都不需要 KYC：下载即用，助记词本地生成。但注意，钱包内置的法币入金通道（on-ramp）是第三方服务，走那条路买币仍然要 KYC。</span><span class="en">None of the six require KYC: download and go, seed generated locally. Note that built-in fiat on-ramps are third-party services — buying crypto through them still requires KYC.</span></p></details>
+<details><summary><span class="zh">本篇评分是怎么算出来的？</span><span class="en">How are these scores calculated?</span></summary><p><span class="zh">加权评分：安全性 35%、易用性 20%、内置费用 15%、开源透明度 15%、中文支持 15%。数据整理于 2026-10-07，为公开参数横评，非上手实测。</span><span class="en">Weighted: Security 35%, Usability 20%, Built-in fees 15%, Openness 15%, Chinese support 15%. Data compiled 2026-10-07; spec-based comparison, not hands-on.</span></p></details>
+</div>
+
+<div class="hub">
+<h3 style="margin-bottom:8px"><span class="zh">📚 继续探索</span><span class="en">📚 Keep exploring</span></h3>
+<p><span class="zh">大额长期持有？看 <a href="/reviews/hardware-wallets/">👛 硬件钱包横评</a>（冷钱包，私钥永不触网）。已有内容：</span><span class="en">Holding large amounts long-term? See the <a href="/reviews/hardware-wallets/">👛 hardware wallet showdown</a> (cold wallets — keys never touch the network). Also on this site:</span></p>
+<p style="margin-top:8px"><a href="/fee-comparison/">💰 <span class="zh">交易所手续费对比</span><span class="en">Exchange fee comparison</span></a> · <a href="/airdrop-calendar/">🗓️ <span class="zh">空投日历</span><span class="en">Airdrop calendar</span></a> · <a href="/reviews/">🔍 <span class="zh">测评中心</span><span class="en">Review center</span></a></p>
+</div>
+
+</div>
+<footer><div class="wrap">
+<div class="disc"><span class="zh"><strong>信息披露：</strong>本篇含 OKX 交易所返佣链接（通过链接开户，本站可获得佣金，你的费率不受影响）；各钱包下载按钮均为官网直达，无钱包返佣。评分基于 2026-10-07 前后公开参数，不构成购买建议；费率与功能以官网实时为准。请只从官网下载钱包应用，警惕假冒应用。<br>🔗 友情链接：<a href="https://vip712.github.io/aioo/">🧰 Aioo 加密工具箱</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse 加密脉动</a><br>📢 Telegram：<a href="https://t.me/cromsg">加密脉动频道</a> · <a href="https://t.me/cromsn">读者讨论群</a></span><span class="en"><strong>Disclosure:</strong> this review contains an OKX exchange referral link (sign-ups earn us a commission at no extra cost to you); all wallet download buttons link to official sites with no wallet affiliate. Scores use public specs around 2026-10-07 — not purchase advice. Download wallet apps only from official sites and beware of fakes.<br>🔗 Links: <a href="https://vip712.github.io/aioo/">🧰 Aioo Crypto Toolbox</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse Crypto News</a><br>📢 Telegram: <a href="https://t.me/cromsg">CryptoPulse Channel</a> · <a href="https://t.me/cromsn">Discussion Group</a></span></div>
+<div>© 2026 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span> · <a href="/reviews/" style="color:var(--acc)">← <span class="zh">测评中心</span><span class="en">Review center</span></a></div>
+</div></footer>
+<script>
+function toggleLang(){var h=document.documentElement;var toEn=h.getAttribute('lang')!=='en';h.setAttribute('lang',toEn?'en':'zh-CN');try{localStorage.setItem('cr-lang',h.getAttribute('lang'));}catch(e){}}
+try{if(localStorage.getItem('cr-lang')==='en')document.documentElement.setAttribute('lang','en');}catch(e){}
+</script>
+</body>
+</html>
