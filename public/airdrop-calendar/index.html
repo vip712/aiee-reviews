@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 空投日历：限时领取与积分 Farming 机会 | Airdrop Calendar</title>
+<meta name="description" content="2026年10月加密空投日历：Sonic、Pharos、Grass 限时领取倒计时，以及 AlloX、Amadeus、Hyperlynx 等积分 farming 机会。中英双语，附防骗指南。">
+<meta name="keywords" content="空投,airdrop,加密货币空投,Sonic空投,Pharos空投,Grass空投,空投日历,crypto airdrop calendar">
+<link rel="canonical" href="https://aiee.duckdns.org/airdrop-calendar/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026 空投日历：限时领取与积分 Farming 机会">
+<meta property="og:description" content="Sonic / Pharos / Grass 限时领取倒计时 + 8 个积分 farming 机会，中英双语。">
+<meta property="og:url" content="https://aiee.duckdns.org/airdrop-calendar/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"空投需要花钱吗？","acceptedAnswer":{"@type":"Answer","text":"大多数空投免费，但领取和交互需要支付链上 gas 费。任何要求你“先转账才能领取”的都是诈骗。"}},
+{"@type":"Question","name":"没赶上快照还能参与吗？","acceptedAnswer":{"@type":"Answer","text":"已经快照的空投无法补救，只能关注新的积分 farming 项目，尽早参与。"}},
+{"@type":"Question","name":"为什么 Sonic 的未领取代币会被销毁？","acceptedAnswer":{"@type":"Answer","text":"Sonic Labs 于 2026-04-02 公告：2026-10-15 后 Season 1 与 Season 2 的未领取份额将由合约销毁，任何地址都可触发，没有宽限期。"}},
+{"@type":"Question","name":"领取时钱包提示高风险怎么办？","acceptedAnswer":{"@type":"Answer","text":"立刻停下来，核对你访问的是否为项目官方域名，不要在仿冒网站上签名任何交易。"}},
+{"@type":"Question","name":"空投收益需要交税吗？","acceptedAnswer":{"@type":"Answer","text":"视你所在司法辖区而定，部分地区将空投视为应税收入，请咨询税务专业人士。"}},
+{"@type":"Question","name":"本页信息多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"本页数据更新于 2026-10-07。空投规则变化很快，参与前务必以项目官方公告为准。"}}
+]}
+</script>
+<style>
+:root{--bg:#0b0f1a;--card:#141b2e;--line:#24304d;--txt:#e8ecf5;--mut:#9aa6c0;--acc:#f5a623;--grn:#22c55e;--red:#ef4444;--blu:#3b82f6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Inter,sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+nav{border-bottom:1px solid var(--line);padding:14px 0;position:sticky;top:0;background:rgba(11,15,26,.94);backdrop-filter:blur(8px);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px;color:#fff;text-decoration:none}
+.langbtn{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:20px;padding:6px 16px;cursor:pointer;font-size:14px}
+.hero{padding:52px 0 26px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,44px);font-weight:800;margin-bottom:12px}
+.hero p{color:var(--mut);max-width:720px;margin:0 auto 16px}
+.updated{display:inline-block;background:#1a2340;border:1px solid var(--line);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--mut)}
+.scam{margin:26px 0;background:#2a1215;border:1px solid #7f1d1d;border-radius:14px;padding:20px 22px}
+.scam h3{color:#fca5a5;margin-bottom:10px;font-size:17px}
+.scam ul{margin-left:20px;color:#fecaca;font-size:14px}
+.scam li{margin-bottom:6px}
+h2.sec{font-size:24px;margin:38px 0 6px}
+p.secsub{color:var(--mut);margin-bottom:18px;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;position:relative}
+.card.urgent{border-color:var(--red)}
+.card.soon{border-color:var(--acc)}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:20px;padding:3px 12px;margin-bottom:10px}
+.b-red{background:#7f1d1d;color:#fecaca}.b-org{background:#7c2d12;color:#fed7aa}.b-grn{background:#14532d;color:#bbf7d0}.b-blu{background:#1e3a8a;color:#bfdbfe}
+.card h3{font-size:20px;margin-bottom:6px}
+.meta{color:var(--mut);font-size:14px;margin-bottom:10px}
+.countdown{font-size:26px;font-weight:800;color:var(--red);margin:8px 0}
+.countdown.soft{color:var(--acc)}
+.card ul{margin:8px 0 8px 20px;font-size:14px;color:#cdd6ea}
+.card li{margin-bottom:4px}
+.steps{background:#0f1526;border-radius:10px;padding:14px 16px;margin-top:12px;font-size:14px}
+.steps ol{margin-left:20px}
+.steps li{margin-bottom:6px}
+.btnrow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px}
+.btn-p{background:var(--grn);color:#04120a}
+.btn-s{background:#1e293b;color:#fff;border:1px solid var(--line)}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.farm{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.farm h3{font-size:17px;margin-bottom:4px}
+.farm .tok{color:var(--acc);font-size:13px;font-weight:700}
+.farm p{font-size:14px;color:#cdd6ea;margin:8px 0}
+.farm .tag{font-size:12px;color:var(--mut)}
+.cta{background:linear-gradient(135deg,#1a2340,#0f2a1a);border:1px solid var(--line);border-radius:14px;padding:28px;margin:38px 0;text-align:center}
+.cta h3{font-size:21px;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:14px;margin-bottom:16px}
+.faq{margin-top:10px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:16px 18px}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin-top:8px;color:#cdd6ea;font-size:14px}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:var(--mut);font-size:13px}
+footer a{color:var(--acc)}
+.disc{background:#0f1526;border-radius:10px;padding:14px 16px;margin-bottom:16px}
+html[lang="en"] .zh{display:none!important}
+html:not([lang="en"]) .en{display:none!important}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="/">🧭 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span></a>
+<button class="langbtn" onclick="toggleLang()">EN / 中文</button>
+</div></nav>
+<div class="wrap">
+
+<div class="hero">
+<h1><span class="zh">🗓️ 空投日历</span><span class="en">🗓️ Airdrop Calendar</span></h1>
+<p><span class="zh">限时领取倒计时 + 正在进行的积分 farming 机会。每一条都标注信息来源，领取前请以项目官方公告为准。</span><span class="en">Claim deadlines with live countdowns plus ongoing points-farming opportunities. Every item cites its source — always verify against official project announcements.</span></p>
+<span class="updated"><span class="zh">数据更新于 2026-10-07 · 共收录 12 个机会</span><span class="en">Updated 2026-10-07 · 12 opportunities tracked</span></span>
+</div>
+
+<div class="scam">
+<h3><span class="zh">⚠️ 防骗提醒（先看这段）</span><span class="en">⚠️ Anti-scam — read first</span></h3>
+<ul>
+<li><span class="zh">领取空投<strong>永远不需要</strong>提供助记词 / 私钥，索要者即诈骗。</span><span class="en"><strong>Never</strong> share your seed phrase / private key to claim. Anyone asking is a scammer.</span></li>
+<li><span class="zh">只通过项目<strong>官方域名</strong>进入领取页，仔细核对拼写，警惕仿冒网站和私信链接。</span><span class="en">Only use the project's <strong>official domain</strong> — check spelling carefully; beware of lookalike sites and DM links.</span></li>
+<li><span class="zh">任何“先转账才能领取 / 先交税才能解锁”的要求都是诈骗。</span><span class="en">Any "send funds first to claim" request is a scam.</span></li>
+<li><span class="zh">钱包弹出“高风险”警告时立刻停手，先核对域名再操作。</span><span class="en">If your wallet flags a transaction as high-risk, stop and re-verify the domain.</span></li>
+<li><span class="zh">本页为信息整理，不构成投资建议；空投价值可能归零。</span><span class="en">This page is informational, not investment advice; airdropped tokens can go to zero.</span></li>
+</ul>
+</div>
+
+<h2 class="sec"><span class="zh">⏰ 限时领取</span><span class="en">⏰ Claim Now</span></h2>
+<p class="secsub"><span class="zh">错过即失去，有明确截止日期的领取。</span><span class="en">Miss the deadline and it's gone — claims with fixed cut-off dates.</span></p>
+
+<div class="card urgent">
+<span class="badge b-red"><span class="zh">🔥 最紧急 · 逾期销毁</span><span class="en">🔥 Most urgent · Burn after deadline</span></span>
+<h3>Sonic (S) <span style="color:var(--mut);font-size:14px">Season 1 &amp; 2</span></h3>
+<div class="meta"><span class="zh">截止：2026-10-15（UTC，项目方未公布具体时刻）</span><span class="en">Deadline: 2026-10-15 (UTC, no time of day given)</span></div>
+<div class="countdown cd" data-dl="2026-10-15T23:59:59Z">--</div>
+<ul>
+<li><span class="zh">约 <strong>3,269 万枚 S</strong> 未领取，截止后将由合约直接销毁，无宽限期（项目方 2026-04-02 公告）。</span><span class="en">About <strong>32.69M S</strong> unclaimed — burned by the contract after the deadline, no grace period (announced 2026-04-02).</span></li>
+<li><span class="zh">自 2026 年春季起领取已<strong>无罚金扣除</strong>，现在领取可拿全额。</span><span class="en">No penalty deductions since spring 2026 — claim now for the full allocation.</span></li>
+<li><span class="zh">资格：Season 1 / Season 2 空投参与者中尚未领取的份额。</span><span class="en">Eligibility: unclaimed allocations of Season 1 / Season 2 participants.</span></li>
+</ul>
+<div class="steps"><ol>
+<li><span class="zh">访问官方领取页（核对域名 <code>my.soniclabs.com</code>）：</span><span class="en">Open the official claim portal (verify domain <code>my.soniclabs.com</code>):</span></li>
+<li><span class="zh">连接当初参与空投的钱包，确认你的份额。</span><span class="en">Connect the wallet you used for the airdrop and confirm your allocation.</span></li>
+<li><span class="zh">按提示完成领取，钱包里预留少量 S 作为 gas 费。</span><span class="en">Complete the claim; keep a little S in the wallet for gas.</span></li>
+</ol></div>
+<div class="btnrow"><a class="btn btn-p" href="https://my.soniclabs.com/airdrop" target="_blank" rel="noopener">↗ <span class="zh">官方领取页</span><span class="en">Official claim portal</span></a></div>
+<p class="note"><span class="zh">信息来源：Sonic Labs 公告（经 CryptoCompass、Crypto World Headline、CryptoNews 引述核实）。</span><span class="en">Source: Sonic Labs announcement (via CryptoCompass, Crypto World Headline, CryptoNews).</span></p>
+</div>
+
+<div class="card soon">
+<span class="badge b-org"><span class="zh">⚡ 本周截止</span><span class="en">⚡ Ends this week</span></span>
+<h3>InterLink Labs (ITL)</h3>
+<div class="meta"><span class="zh">截止：2026-10-12（UTC）</span><span class="en">Deadline: 2026-10-12 (UTC)</span></div>
+<div class="countdown soft cd" data-dl="2026-10-12T23:59:59Z">--</div>
+<ul>
+<li><span class="zh">早期用户奖励领取通道开放中。</span><span class="en">Reward claim open for eligible early users.</span></li>
+<li><span class="zh">资格：以项目官方公布的早期用户名单为准。</span><span class="en">Eligibility: per the project's official early-user list.</span></li>
+</ul>
+<div class="steps"><ol>
+<li><span class="zh">通过 InterLink 官方渠道（官网 / 官方社媒）进入领取页。</span><span class="en">Enter the claim page via InterLink's official channels (website / official socials).</span></li>
+<li><span class="zh">连接符合条件的钱包完成领取。</span><span class="en">Connect the eligible wallet to claim.</span></li>
+</ol></div>
+<p class="note"><span class="zh">截止日期来自第三方聚合（AirdropBuzz），领取前请以官方公告核实。</span><span class="en">Deadline via third-party aggregator (AirdropBuzz) — verify against the official announcement before claiming.</span></p>
+</div>
+
+<div class="card">
+<span class="badge b-blu"><span class="zh">限时领取</span><span class="en">Limited claim</span></span>
+<h3>Pharos (PROS)</h3>
+<div class="meta"><span class="zh">截止：2026-10-25（UTC）· 180 天领取期最后一天</span><span class="en">Deadline: 2026-10-25 (UTC) · last day of the 180-day claim window</span></div>
+<div class="countdown soft cd" data-dl="2026-10-25T23:59:59Z">--</div>
+<ul>
+<li><span class="zh">社区空投占 PROS 总量 <strong>6%</strong>（本次 TGE 发放 1%，另 5% 预留未来空投与社区奖励）。</span><span class="en">Community airdrop is <strong>6%</strong> of total PROS supply (1% at this TGE, 5% reserved for future).</span></li>
+<li><span class="zh">资格：测试网参与者、“Stake Before the Stake”贡献者、Discord 身份组持有者、OKX 钱包活动用户；多类别资格自动合并为一次领取。</span><span class="en">Eligibility: testnet participants, "Stake Before the Stake" contributors, Discord role holders, OKX wallet campaign users; multi-category allocations auto-merge into one claim.</span></li>
+<li><span class="zh">逾期未领将退回 Pharos 基金会，领取页关闭。</span><span class="en">Unclaimed tokens return to the Pharos Foundation; the claim page closes.</span></li>
+</ul>
+<div class="btnrow"><a class="btn btn-s" href="https://airdrops.io/pharos/" target="_blank" rel="noopener">↗ <span class="zh">查看空投详情与领取入口</span><span class="en">Airdrop details &amp; claim entry</span></a></div>
+<p class="note"><span class="zh">信息来源：Pharos 项目方（经 CryptoCompass、airdrops.io 核实）。</span><span class="en">Source: Pharos project (via CryptoCompass, airdrops.io).</span></p>
+</div>
+
+<div class="card">
+<span class="badge b-grn"><span class="zh">长期窗口</span><span class="en">Long window</span></span>
+<h3>Grass — Stage 2</h3>
+<div class="meta"><span class="zh">截止：2027-01-22（UTC）</span><span class="en">Deadline: 2027-01-22 (UTC)</span></div>
+<div class="countdown soft cd" data-dl="2027-01-22T23:59:59Z">--</div>
+<ul>
+<li><span class="zh">第二阶段奖励以 <strong>USDC</strong> 支付（不是 GRASS 代币）。</span><span class="en">Stage 2 rewards are paid in <strong>USDC</strong> (not GRASS).</span></li>
+<li><span class="zh">资格：Grass 第二阶段参与者。</span><span class="en">Eligibility: Grass Stage 2 participants.</span></li>
+<li><span class="zh">时间充裕，但建议设个提醒，别拖到最后。</span><span class="en">Plenty of time — but set a reminder rather than leaving it to the last day.</span></li>
+</ul>
+<p class="note"><span class="zh">信息来源：CryptoCompass / Pluang（2026-10-05 当周）。请通过 Grass 官方渠道领取。</span><span class="en">Source: CryptoCompass / Pluang (week of 2026-10-05). Claim via Grass official channels.</span></p>
+</div>
+
+<h2 class="sec"><span class="zh">🌱 积分 Farming（进行中）</span><span class="en">🌱 Points Farming (Ongoing)</span></h2>
+<p class="secsub"><span class="zh">通过完成任务 / 测试网交互赚积分，未来兑换代币。规则以项目方最新公告为准。</span><span class="en">Earn points via quests / testnet activity for future token conversion. Rules per the latest official announcements.</span></p>
+
+<div class="grid">
+<div class="farm"><h3>AlloX</h3><div class="tok">$ALLOX · 积分 → 代币已确认</div>
+<p><span class="zh">积分确认为 TGE 时兑换 $ALLOX，TGE 前持续活跃中。</span><span class="en">Points confirmed to convert into $ALLOX at TGE; active pre-TGE.</span></p>
+<div class="tag"><span class="zh">参与：官方任务赚积分 · 成本：免费</span><span class="en">How: official quests · Cost: free</span></div></div>
+
+<div class="farm"><h3>Amadeus Protocol</h3><div class="tok">PRIME Points · 与空投挂钩</div>
+<p><span class="zh">PRIME 积分任务与后续空投挂钩，本轮任务 <strong>10-12 截止</strong>。</span><span class="en">PRIME Points quests tied to an upcoming airdrop; current round ends <strong>Oct 12</strong>.</span></p>
+<div class="tag"><span class="zh">参与：任务平台完成 quests · 成本：免费</span><span class="en">How: quest platform · Cost: free</span></div></div>
+
+<div class="farm"><h3>Nowa Finance</h3><div class="tok">NOWA · 1:1 兑换已确认</div>
+<p><span class="zh">挖出的 NOWA 确认按 1:1 兑换 TGE 份额，devnet farming 进行中。</span><span class="en">Farmed NOWA confirmed for 1:1 conversion into TGE allocation; devnet farming live.</span></p>
+<div class="tag"><span class="zh">参与：devnet 交互 · 成本：免费</span><span class="en">How: devnet interaction · Cost: free</span></div></div>
+
+<div class="farm"><h3>Hyperlynx</h3><div class="tok">$LYNX · 3 亿枚分配</div>
+<p><span class="zh">“The Hunt”活动分配 3 亿枚 $LYNX，TGE 目标为 10–11 月。</span><span class="en">"The Hunt" allocates 300M $LYNX; TGE targeted Oct–Nov.</span></p>
+<div class="tag"><span class="zh">参与：官方活动 · 成本：免费</span><span class="en">How: official campaign · Cost: free</span></div></div>
+
+<div class="farm"><h3>Axis Robotics</h3><div class="tok">$AXIS · 创作者奖励池占总量 0.20%</div>
+<p><span class="zh">$AXIS 已确认，创作者奖励池为代币总量的 0.20%，多轮进行中。</span><span class="en">$AXIS confirmed; creator reward pool is 0.20% of supply, multi-epoch.</span></p>
+<div class="tag"><span class="zh">参与：内容创作 / 社区任务 · 成本：免费</span><span class="en">How: creator / community quests · Cost: free</span></div></div>
+
+<div class="farm"><h3>TastyCo</h3><div class="tok">$TASTY · 10 万美元活动</div>
+<p><span class="zh">10 万美元 $TASTY 空投活动，代币经济模型已公布。</span><span class="en">$100K $TASTY airdrop campaign with published tokenomics.</span></p>
+<div class="tag"><span class="zh">参与：官方活动页 · 成本：免费</span><span class="en">How: official campaign page · Cost: free</span></div></div>
+
+<div class="farm"><h3>QyroLabs</h3><div class="tok">XP · 早期支持者计划已确认</div>
+<p><span class="zh">早期支持者空投计划已确认，XP 活动进行中，兑换规则待定。</span><span class="en">Early-supporter airdrop program confirmed; XP campaign live, conversion TBA.</span></p>
+<div class="tag"><span class="zh">参与：XP 任务 · 成本：免费</span><span class="en">How: XP quests · Cost: free</span></div></div>
+
+<div class="farm"><h3>VOICE</h3><div class="tok">$VOICE · Q4 2026 TGE</div>
+<p><span class="zh">已公布 $VOICE 分配意向，TGE 计划 2026 年 Q4，分发细则尚未完整。</span><span class="en">Advertised $VOICE allocations with Q4 2026 TGE; distribution rules still incomplete.</span></p>
+<div class="tag"><span class="zh">参与：关注官方公告 · 成本：免费</span><span class="en">How: follow official announcements · Cost: free</span></div></div>
+</div>
+<p class="note"><span class="zh">积分项目信息来源：AirdropBuzz《Confirmed Crypto Airdrops October 2026》（2026-10）。积分不保证兑换比例与价值，DYOR。</span><span class="en">Points-program info via AirdropBuzz "Confirmed Crypto Airdrops October 2026" (Oct 2026). Points don't guarantee conversion terms or value — DYOR.</span></p>
+
+<div class="cta">
+<h3><span class="zh">💼 参与前准备：钱包 + 交易所账户</span><span class="en">💼 Get ready: wallet + exchange account</span></h3>
+<p><span class="zh">领空投、付 gas、变现都需要：一个自托管钱包，以及一个低费率的交易所账户。</span><span class="en">Claiming, gas and cashing out all need: a self-custody wallet plus a low-fee exchange account.</span></p>
+<div class="btnrow" style="justify-content:center">
+<a class="btn btn-p" href="https://account.binance.com/register?registerChannel=user_center&ref=392708322" target="_blank" rel="noopener nofollow sponsored">Binance <span class="zh">注册</span><span class="en">Sign up</span></a>
+<a class="btn btn-p" href="https://www.mitnpkwxvfr.net/join/PFVFLPPF" target="_blank" rel="noopener nofollow sponsored">OKX <span class="zh">注册</span><span class="en">Sign up</span></a>
+</div>
+<p class="note"><span class="zh">含返佣链接：通过本站链接注册交易所，本站可能获得返佣，不影响你的费率。</span><span class="en">Affiliate disclosure: signing up via these links may earn this site a commission at no extra cost to you.</span></p>
+</div>
+
+<h2 class="sec"><span class="zh">📖 新手入门：空投是怎么回事</span><span class="en">📖 New here: how airdrops work</span></h2>
+<div class="card"><ul>
+<li><span class="zh"><strong>准备钱包与 gas：</strong>多数空投在 EVM / Solana 等链上发放，钱包里常备少量原生代币付 gas。</span><span class="en"><strong>Wallet + gas:</strong> most airdrops land on EVM / Solana chains — keep a little native token for gas.</span></li>
+<li><span class="zh"><strong>只做官方任务：</strong>从项目官网或官方社媒进入，任务平台（如 Galxe）也认准官方活动页。</span><span class="en"><strong>Official quests only:</strong> enter via the project's site or official socials; verify official campaign pages on quest platforms.</span></li>
+<li><span class="zh"><strong>快照机制：</strong>很多空投按某个时间点的持仓或交互记录发放，公告快照规则后突击刷量通常无效。</span><span class="en"><strong>Snapshots:</strong> many airdrops distribute based on holdings or activity at a snapshot — last-minute farming after rules drop rarely works.</span></li>
+<li><span class="zh"><strong>领取与记录：</strong>及时领取，保留交易记录，部分地区空投收益需要申报纳税。</span><span class="en"><strong>Claim &amp; records:</strong> claim promptly, keep tx records — airdrop income may be taxable in your jurisdiction.</span></li>
+</ul></div>
+
+<h2 class="sec"><span class="zh">❓ 常见问题</span><span class="en">❓ FAQ</span></h2>
+<div class="faq">
+<details><summary><span class="zh">空投需要花钱吗？</span><span class="en">Do airdrops cost money?</span></summary><p><span class="zh">大多数空投本身免费，但领取和交互需要支付链上 gas 费。任何要求你“先转账才能领取”的都是诈骗。</span><span class="en">Most airdrops are free, but claiming and interacting cost on-chain gas. Any "send funds first to claim" request is a scam.</span></p></details>
+<details><summary><span class="zh">没赶上快照还能参与吗？</span><span class="en">Can I still join if I missed the snapshot?</span></summary><p><span class="zh">已经快照的空投无法补救。把精力放到新的积分 farming 项目上，尽早参与。</span><span class="en">Snapshotted airdrops can't be joined retroactively. Focus on new points-farming programs and start early.</span></p></details>
+<details><summary><span class="zh">为什么 Sonic 的未领取代币会被销毁？</span><span class="en">Why are Sonic's unclaimed tokens burned?</span></summary><p><span class="zh">Sonic Labs 于 2026-04-02 公告：2026-10-15 之后，Season 1 与 Season 2 的未领取份额将由合约销毁，任何地址都可触发，没有宽限期。</span><span class="en">Sonic Labs announced on 2026-04-02: after 2026-10-15, unclaimed Season 1 &amp; 2 allocations are burned by the contract — triggerable by any address, no grace period.</span></p></details>
+<details><summary><span class="zh">领取时钱包提示“高风险”怎么办？</span><span class="en">What if my wallet flags a claim as high-risk?</span></summary><p><span class="zh">立刻停下来，核对你访问的是否为项目官方域名。不要在仿冒网站上签名任何交易。</span><span class="en">Stop immediately and verify you're on the project's official domain. Never sign transactions on lookalike sites.</span></p></details>
+<details><summary><span class="zh">空投收益需要交税吗？</span><span class="en">Are airdrops taxable?</span></summary><p><span class="zh">视你所在司法辖区而定，部分地区将空投视为应税收入，请咨询税务专业人士。</span><span class="en">It depends on your jurisdiction — some treat airdrops as taxable income. Consult a tax professional.</span></p></details>
+<details><summary><span class="zh">本页信息多久更新一次？</span><span class="en">How often is this page updated?</span></summary><p><span class="zh">本页数据更新于 2026-10-07。空投规则变化很快，参与前务必以项目官方公告为准。</span><span class="en">Data updated 2026-10-07. Airdrop terms change fast — always verify against official announcements.</span></p></details>
+</div>
+
+</div>
+<footer><div class="wrap">
+<div class="disc"><span class="zh"><strong>信息披露：</strong>本页部分链接为返佣链接；所有费率、日期与资格信息整理自公开报道（CryptoCompass、Crypto World Headline、airdrops.io、AirdropBuzz），数据更新于 2026-10-07，不构成投资建议。空投存在归零与诈骗风险，参与前请 DYOR 并以官方公告为准。</span><span class="en"><strong>Disclosure:</strong> some links are affiliate links; all rates, dates and eligibility info are compiled from public reporting (CryptoCompass, Crypto World Headline, airdrops.io, AirdropBuzz), updated 2026-10-07 — not investment advice. Airdrops can go to zero and attract scams; DYOR and verify official announcements.</span></div>
+<div><span class="zh">信息来源：</span><span class="en">Sources: </span><a href="https://cryptocompass.com/articles/the-most-profitable-crypto-airdrops-of-the-week-week-41-and-the-october-15-sonic-burn" target="_blank" rel="noopener">CryptoCompass</a> · <a href="https://airdrops.io/pharos/" target="_blank" rel="noopener">airdrops.io/pharos</a> · <a href="https://airdropbuzz.com/article/confirmed-crypto-airdrops-october-2026" target="_blank" rel="noopener">AirdropBuzz</a></div>
+<div style="margin-top:8px">© 2026 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span> · <a href="/">← <span class="zh">返回首页</span><span class="en">Home</span></a></div>
+</div></footer>
+<script>
+var CUR='zh';
+function setLang(l){CUR=(l==='en')?'en':'zh';document.documentElement.setAttribute('lang',CUR==='en'?'en':'zh-CN');try{localStorage.setItem('cr-lang',document.documentElement.getAttribute('lang'));}catch(e){}tick();}
+function toggleLang(){setLang(CUR==='en'?'zh':'en');}
+function pad(n){return (n<10?'0':'')+n;}
+function tick(){var now=Date.now();document.querySelectorAll('.cd').forEach(function(el){var dl=new Date(el.getAttribute('data-dl')).getTime();var d=dl-now;if(d<=0){el.textContent=(CUR==='en'?'Ended':'已截止');return;}var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4);el.textContent=(CUR==='en'?days+'d '+pad(h)+'h '+pad(m)+'m left':'剩余 '+days+' 天 '+pad(h)+' 小时 '+pad(m)+' 分');});}
+try{setLang(localStorage.getItem('cr-lang')==='en'?'en':'zh');}catch(e){setLang('zh');}
+setInterval(tick,30000);tick();
+</script>
+</body>
+</html>
