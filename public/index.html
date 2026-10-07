@@ -3,21 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>费率对比与测评 · Fee Comparison & Reviews — 即将上线</title>
+<title>加密测评站 · Crypto Reviews — 交易所费率对比与产品测评</title>
+<meta name="description" content="交易所手续费实时对比、提现费用对比、加密产品测评。Binance、OKX、Bitfinex 费率实测，帮你在下单前看清真实成本。">
+<meta name="keywords" content="交易所手续费对比,Binance费率,OKX费率,Bitfinex零费率,加密货币测评,exchange fee comparison">
+<link rel="canonical" href="https://aiee.duckdns.org/">
+<meta property="og:title" content="加密测评站 · Crypto Reviews">
+<meta property="og:description" content="交易所手续费实时对比、提现费用对比、加密产品测评。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aiee.duckdns.org/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"加密测评站 Crypto Reviews","url":"https://aiee.duckdns.org/","inLanguage":["zh-CN","en"]}
+</script>
 <style>
-:root{color-scheme:dark}
-body{font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#0f1420;color:#e8eaf0;margin:0;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
-h1{font-size:2rem;margin:0 0 12px}
-p{color:#9aa3b2;line-height:1.8;margin:8px 0}
-.badge{display:inline-block;border:1px solid #2a3348;border-radius:999px;padding:4px 14px;font-size:.8rem;color:#8b95a9;margin-bottom:16px}
+:root{color-scheme:dark;--bg:#0f1420;--card:#161d2e;--line:#2a3348;--txt:#e8eaf0;--mut:#9aa3b2;--acc:#f0b90b}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);margin:0;padding:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.logo{font-weight:700;font-size:1.15rem}
+.langbtn{background:#1c2438;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:6px 14px;cursor:pointer;font-size:.85rem}
+.hero{text-align:center;padding:56px 0 36px}
+.hero h1{font-size:2.1rem;margin:0 0 12px}
+.hero p{color:var(--mut);line-height:1.8;max-width:640px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding:12px 0 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;text-decoration:none;color:var(--txt);display:block;transition:transform .15s,border-color .15s}
+a.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card .tag{display:inline-block;font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--mut);margin-bottom:12px}
+.card .tag.live{color:#7ee2a8;border-color:#2c5a40}
+.card h2{font-size:1.25rem;margin:0 0 8px}
+.card p{color:var(--mut);font-size:.92rem;line-height:1.7;margin:0}
+.card .go{margin-top:14px;color:var(--acc);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:.8rem;line-height:1.8}
+.en{display:none}
+html[lang="en"] .en{display:inline}
+html[lang="en"] .zh{display:none}
+html[lang="en"] p.en,html[lang="en"] div.en,html[lang="en"] h1.en,html[lang="en"] h2.en{display:block}
+html[lang="en"] span.en{display:inline}
+@media(max-width:600px){.hero h1{font-size:1.6rem}}
 </style>
 </head>
 <body>
-<main>
-<div class="badge">aiee.duckdns.org</div>
-<h1>📊 费率对比与测评</h1>
-<p>交易所手续费实时对比、提现费用对比、产品测评——帮你在下单前看清真实成本。页面搭建中。</p>
-<p lang="en">Real-time exchange fee comparison and crypto product reviews. Coming soon.</p>
-</main>
+<div class="wrap">
+<header class="top">
+<div class="logo">📊 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span></div>
+<button class="langbtn" onclick="toggleLang()">EN / 中文</button>
+</header>
+
+<section class="hero">
+<h1><span class="zh">交易所费率对比与加密产品测评</span><span class="en">Exchange Fee Comparison &amp; Crypto Product Reviews</span></h1>
+<p><span class="zh">实测三家主流交易所的真实费率，用计算器算清每一笔成本。<br>数据整理于 2026-10-07，标准等级费率；交易所可能随时调整，以下单时官网为准。</span>
+<span class="en">Real, tested fee data for three major exchanges, plus a calculator for your exact cost.<br>Data compiled 2026-10-07, standard tier; exchanges may adjust rates — check the official site before trading.</span></p>
+</section>
+
+<section class="grid">
+<a class="card" href="/fee-comparison/">
+<div class="tag live"><span class="zh">已上线</span><span class="en">Live</span></div>
+<h2><span class="zh">💰 交易所手续费对比</span><span class="en">💰 Exchange Fee Comparison</span></h2>
+<p><span class="zh">Binance vs OKX vs Bitfinex：现货 / 合约 / 提现费率全表 + 实时计算器。Bitfinex 零费率时代，你选对了吗？</span>
+<span class="en">Binance vs OKX vs Bitfinex: spot, futures and withdrawal fees with a live calculator. Zero-fee era — are you on the right venue?</span></p>
+<div class="go"><span class="zh">查看对比 →</span><span class="en">Compare →</span></div>
+</a>
+<div class="card">
+<div class="tag"><span class="zh">即将上线</span><span class="en">Coming soon</span></div>
+<h2><span class="zh">🎯 空投日历</span><span class="en">🎯 Airdrop Calendar</span></h2>
+<p><span class="zh">进行中的空投机会、参与条件与截止时间，一页看全。</span>
+<span class="en">Live airdrop opportunities, requirements and deadlines on one page.</span></p>
+</div>
+<div class="card">
+<div class="tag"><span class="zh">即将上线</span><span class="en">Coming soon</span></div>
+<h2><span class="zh">👛 钱包与工具测评</span><span class="en">👛 Wallet &amp; Tool Reviews</span></h2>
+<p><span class="zh">冷钱包、交易工具的真实体验测评，只说人话。</span>
+<span class="en">Hands-on reviews of wallets and trading tools, no fluff.</span></p>
+</div>
+</section>
+
+<footer>
+<span class="zh">本站部分链接为返佣链接：通过链接注册交易，交易所会将部分手续费返还给本站用于维持运营，你的费率不受影响。费率数据整理于 2026-10-07，请以官网最新为准。</span>
+<span class="en">Disclosure: some links are referral links. The exchange shares part of the trading fee with us to keep the site running; your rates are unaffected. Fee data compiled 2026-10-07 — always check the official site for the latest.</span>
+</footer>
+</div>
+<script>
+function toggleLang(){
+  var h=document.documentElement;
+  h.lang = h.lang==='en' ? 'zh-CN' : 'en';
+  try{localStorage.setItem('cr-lang',h.lang);}catch(e){}
+}
+try{if(localStorage.getItem('cr-lang')==='en')document.documentElement.lang='en';}catch(e){}
+</script>
 </body>
 </html>
