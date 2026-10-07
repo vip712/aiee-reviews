@@ -214,14 +214,14 @@ var FEES = {
   bitfinex: { spot: {maker: 0,      taker: 0},      fut: {maker: 0,      taker: 0} }
 };
 var NAMES = { binance: 'Binance', okx: 'OKX', bitfinex: 'Bitfinex' };
-function lang(){ return document.documentElement.lang === 'en' ? 'en' : 'zh'; }
-function toggleLang(){
-  var h = document.documentElement;
-  h.lang = h.lang === 'en' ? 'zh-CN' : 'en';
-  try{ localStorage.setItem('cr-lang', h.lang); }catch(e){}
-  calc();
+var CUR = 'zh';
+function lang(){ return CUR; }
+function setLang(l){
+  CUR = (l === 'en') ? 'en' : 'zh';
+  document.documentElement.setAttribute('lang', CUR === 'en' ? 'en' : 'zh-CN');
+  try{ localStorage.setItem('cr-lang', document.documentElement.getAttribute('lang')); }catch(e){}
 }
-try{ if(localStorage.getItem('cr-lang') === 'en') document.documentElement.lang = 'en'; }catch(e){}
+function toggleLang(){ setLang(CUR === 'en' ? 'zh' : 'en'); calc(); }
 function setSeg(id, btn){
   var seg = document.getElementById(id);
   for(var i = 0; i < seg.children.length; i++) seg.children[i].classList.remove('on');
@@ -263,6 +263,7 @@ function calc(){
   });
   document.getElementById('results').innerHTML = html;
 }
+try{ setLang(localStorage.getItem('cr-lang') === 'en' ? 'en' : 'zh'); }catch(e){ setLang('zh'); }
 calc();
 </script>
 </body>

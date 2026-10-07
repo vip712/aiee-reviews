@@ -85,10 +85,11 @@ html[lang="en"] span.en{display:inline}
 <script>
 function toggleLang(){
   var h=document.documentElement;
-  h.lang = h.lang==='en' ? 'zh-CN' : 'en';
-  try{localStorage.setItem('cr-lang',h.lang);}catch(e){}
+  var toEn = h.getAttribute('lang') !== 'en';
+  h.setAttribute('lang', toEn ? 'en' : 'zh-CN');
+  try{localStorage.setItem('cr-lang',h.getAttribute('lang'));}catch(e){}
 }
-try{if(localStorage.getItem('cr-lang')==='en')document.documentElement.lang='en';}catch(e){}
+try{if(localStorage.getItem('cr-lang')==='en')document.documentElement.setAttribute('lang','en');}catch(e){}
 </script>
 </body>
 </html>
