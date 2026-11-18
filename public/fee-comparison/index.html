@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 交易所手续费对比：Binance vs OKX vs Bitfinex（含实时计算器）</title>
-<meta name="description" content="Binance、OKX、Bitfinex 三家交易所现货/合约/提现手续费全对比。Bitfinex 挂单吃单全免 0%，OKX 现货挂单 0.08%，Binance 吃单 0.10%。输入金额实时计算你的交易成本。数据更新于 2026-10-07。">
+<meta name="description" content="Binance、OKX、Bitfinex 三家交易所现货/合约/提现手续费全对比。Bitfinex 挂单吃单全免 0%，OKX 现货挂单 0.08%，Binance 吃单 0.10%。输入金额实时计算你的交易成本。数据更新于 2026-11-18。">
 <meta name="keywords" content="交易所手续费,手续费对比,Binance费率,OKX费率,Bitfinex零费率,exchange fee comparison,binance vs okx">
 <link rel="canonical" href="https://aiee.duckdns.org/fee-comparison/">
 <meta property="og:title" content="2026 交易所手续费对比：Binance vs OKX vs Bitfinex">
@@ -77,8 +77,8 @@ html[lang="en"] span.en{display:inline}
 <h1><span class="zh">2026 交易所手续费对比</span><span class="en">2026 Exchange Fee Comparison</span></h1>
 <p class="sub"><span class="zh">Binance · OKX · Bitfinex 三家实测费率。输入你的交易金额，算清每一笔成本。</span>
 <span class="en">Tested fee data for Binance, OKX and Bitfinex. Enter your trade size and see your exact cost.</span></p>
-<p class="meta"><span class="zh">数据更新于 2026-10-07 · 标准等级费率 · 交易所可能随时调整，以下单时官网为准</span>
-<span class="en">Data updated 2026-10-07 · Standard tier · Exchanges may adjust rates — check the official site before trading</span></p>
+<p class="meta"><span class="zh">数据更新于 2026-11-18 · 标准等级费率 · 交易所可能随时调整，以下单时官网为准</span>
+<span class="en">Data updated 2026-11-18 · Standard tier · Exchanges may adjust rates — check the official site before trading</span></p>
 </section>
 
 <div class="hook">
@@ -113,7 +113,7 @@ html[lang="en"] span.en{display:inline}
 </div>
 <div class="row">
 <label class="check"><input type="checkbox" id="bnb" onchange="calc()">
-<span class="zh">Binance 使用 BNB 抵扣（现货 -25%，合约吃单 -10%）</span>
+<span class="zh">Binance 使用 BNB 抵扣（现货 -25%，合约 -10%）</span>
 <span class="en">Pay Binance fees in BNB (spot −25%, futures taker −10%)</span></label>
 </div>
 <div class="results" id="results"></div>
@@ -134,7 +134,7 @@ html[lang="en"] span.en{display:inline}
 <h2 class="sec"><span class="zh">📋 合约费率（U 本位）</span><span class="en">📋 Futures Fees (USDT-margined)</span></h2>
 <table class="fee">
 <tr><th><span class="zh">交易所</span><span class="en">Exchange</span></th><th><span class="zh">挂单 Maker</span><span class="en">Maker</span></th><th><span class="zh">吃单 Taker</span><span class="en">Taker</span></th><th><span class="zh">平台币抵扣</span><span class="en">Token discount</span></th></tr>
-<tr><td>Binance</td><td class="num">0.02%</td><td class="num">0.05%</td><td><span class="zh">BNB 抵扣吃单 -10% → 0.045%</span><span class="en">BNB −10% taker → 0.045%</span></td></tr>
+<tr><td>Binance</td><td class="num">0.02%</td><td class="num">0.05%</td><td><span class="zh">BNB 抵扣 -10% → 挂单 0.018% / 吃单 0.045%</span><span class="en">BNB −10% → maker 0.018% / taker 0.045%</span></td></tr>
 <tr><td>OKX</td><td class="num">0.02%</td><td class="num">0.05%</td><td><span class="zh">OKB 持仓阶梯折扣</span><span class="en">Tiered OKB discounts</span></td></tr>
 <tr><td>Bitfinex</td><td class="num hl">0%</td><td class="num hl">0%</td><td><span class="zh">—（本就全免）</span><span class="en">— (already zero)</span></td></tr>
 </table>
@@ -146,9 +146,9 @@ html[lang="en"] span.en{display:inline}
 <h2 class="sec"><span class="zh">📋 提现手续费</span><span class="en">📋 Withdrawal Fees</span></h2>
 <table class="fee">
 <tr><th><span class="zh">币种 / 网络</span><span class="en">Asset / Network</span></th><th>Binance</th><th>OKX</th><th>Bitfinex</th></tr>
-<tr><td>BTC</td><td class="num">0.00002 BTC</td><td class="num">≈0.0004 BTC</td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
-<tr><td>ETH (ERC20)</td><td class="num">0.00007 ETH</td><td><span class="zh">按网络</span><span class="en">Network rate</span></td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
-<tr><td>USDT (TRC20)</td><td class="num">1.5 USDT</td><td class="num">≈1–2.6 USDT</td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
+<tr><td>BTC</td><td class="num">0.00002 BTC</td><td class="num">≈0.000015 BTC</td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
+<tr><td>ETH (ERC20)</td><td class="num">0.00015 ETH</td><td><span class="zh">按网络</span><span class="en">Network rate</span></td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
+<tr><td>USDT (TRC20)</td><td class="num">2 USDT</td><td class="num">≈1–2.6 USDT</td><td><span class="zh">按网络实时</span><span class="en">Network rate</span></td></tr>
 </table>
 <p class="note"><span class="zh">提现费按次、按网络固定收取，与交易费分开。小额频繁提现时提现费占比可能超过交易费；TRC20 通常是最便宜的 USDT 提现网络。OKX / Bitfinex 的提现费随网络拥堵浮动，以提币页面显示为准。</span>
 <span class="en">Withdrawal fees are flat per transaction and network-based, separate from trading fees. For small frequent withdrawals they can exceed trading fees; TRC20 is usually cheapest for USDT. OKX / Bitfinex fees float with congestion — check the withdrawal screen.</span></p>
@@ -170,7 +170,7 @@ html[lang="en"] span.en{display:inline}
 </details>
 <details>
 <summary><span class="zh">Binance 的 BNB 抵扣值得开吗？</span><span class="en">Is Binance's BNB discount worth enabling?</span></summary>
-<p><span class="zh">用 BNB 抵扣现货手续费打 75 折（0.10% → 0.075%），合约吃单 9 折。如果你本来就持有 BNB，相当于白捡的折扣；专门为此买入 BNB 则要考虑币价波动风险。</span>
+<p><span class="zh">用 BNB 抵扣现货手续费打 75 折（0.10% → 0.075%），合约 9 折（挂单 0.018%、吃单 0.045%）。如果你本来就持有 BNB，相当于白捡的折扣；专门为此买入 BNB 则要考虑币价波动风险。</span>
 <span class="en">Paying in BNB cuts spot fees by 25% (0.10% → 0.075%) and futures taker fees by 10%. Free discount if you already hold BNB; buying BNB just for this adds price risk.</span></p>
 </details>
 <details>
@@ -192,14 +192,14 @@ html[lang="en"] span.en{display:inline}
 </section>
 
 <footer>
-<span class="zh">披露：本站部分链接为返佣链接。通过链接注册并交易，交易所会将部分手续费返还给本站用于维持运营，你的费率不受影响。费率数据整理于 2026-10-07，交易所可能随时调整，以下单时官网为准。<br>🔗 友情链接：<a href="https://vip712.github.io/aioo/">🧰 Aioo 加密工具箱</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse 加密脉动</a> · <a href="https://aiee.neocities.org/guides/exchange-fees">📖 英文版手续费详解</a><br>📢 Telegram：<a href="https://t.me/cromsg">加密脉动频道</a> · <a href="https://t.me/cromsn">读者讨论群</a></span>
-<span class="en">Disclosure: some links are referral links. The exchange shares part of the trading fee with us; your rates are unaffected. Fee data compiled 2026-10-07 — exchanges may adjust rates, check the official site before trading.<br>🔗 Links: <a href="https://vip712.github.io/aioo/">🧰 Aioo Crypto Toolbox</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse Crypto News</a> · <a href="https://aiee.neocities.org/guides/exchange-fees">📖 English fee guide</a><br>📢 Telegram: <a href="https://t.me/cromsg">CryptoPulse Channel</a> · <a href="https://t.me/cromsn">Discussion Group</a></span>
+<span class="zh">披露：本站部分链接为返佣链接。通过链接注册并交易，交易所会将部分手续费返还给本站用于维持运营，你的费率不受影响。费率数据整理于 2026-11-18，交易所可能随时调整，以下单时官网为准。<br>🔗 友情链接：<a href="https://vip712.github.io/aioo/">🧰 Aioo 加密工具箱</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse 加密脉动</a> · <a href="https://aiee.neocities.org/guides/exchange-fees">📖 英文版手续费详解</a><br>📢 Telegram：<a href="https://t.me/cromsg">加密脉动频道</a> · <a href="https://t.me/cromsn">读者讨论群</a></span>
+<span class="en">Disclosure: some links are referral links. The exchange shares part of the trading fee with us; your rates are unaffected. Fee data compiled 2026-11-18 — exchanges may adjust rates, check the official site before trading.<br>🔗 Links: <a href="https://vip712.github.io/aioo/">🧰 Aioo Crypto Toolbox</a> · <a href="https://vip712.github.io/aiee/">📰 CryptoPulse Crypto News</a> · <a href="https://aiee.neocities.org/guides/exchange-fees">📖 English fee guide</a><br>📢 Telegram: <a href="https://t.me/cromsg">CryptoPulse Channel</a> · <a href="https://t.me/cromsn">Discussion Group</a></span>
 </footer>
 </div>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"挂单 (Maker) 和吃单 (Taker) 有什么区别？","acceptedAnswer":{"@type":"Answer","text":"挂单是把限价单挂在订单簿上等待成交（提供流动性），吃单是直接吃掉订单簿上的现有单子（拿走流动性）。交易所通常给挂单更低的费率。"}},
-{"@type":"Question","name":"Binance 的 BNB 抵扣值得开吗？","acceptedAnswer":{"@type":"Answer","text":"用 BNB 抵扣现货手续费打 75 折（0.10%→0.075%），合约吃单 9 折。本来就持有 BNB 就是白捡的折扣。"}},
+{"@type":"Question","name":"Binance 的 BNB 抵扣值得开吗？","acceptedAnswer":{"@type":"Answer","text":"用 BNB 抵扣现货手续费打 75 折（0.10%→0.075%），合约 9 折。本来就持有 BNB 就是白捡的折扣。"}},
 {"@type":"Question","name":"Bitfinex 零费率是永久的吗？","acceptedAnswer":{"@type":"Answer","text":"这是 Bitfinex 自 2025 年 12 月起的标准费率，不是限时活动，但交易所保留调整权利。"}},
 {"@type":"Question","name":"提现手续费和交易手续费是一回事吗？","acceptedAnswer":{"@type":"Answer","text":"不是。交易手续费按成交金额比例收，提现手续费按次、按网络固定收。"}}
 ]}
@@ -247,6 +247,7 @@ function calc(){
     if(k === 'binance' && useBnb){
       if(mkt === 'spot') rate = 0.00075;
       else if(side === 'taker') rate = 0.00045;
+      else if(side === 'maker') rate = 0.00018;
     }
     out.push({ k: k, fee: amt * rate, rate: rate });
   });

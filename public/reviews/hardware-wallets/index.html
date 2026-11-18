@@ -17,7 +17,7 @@
 {"@type":"Question","name":"助记词丢了会怎样？","acceptedAnswer":{"@type":"Answer","text":"助记词是资产的最终凭证，丢了等于丢了币，泄露了等于送人。务必离线抄写在防火防水的介质上，绝不拍照、绝不存云端、绝不告诉任何人。"}},
 {"@type":"Question","name":"带蓝牙的硬件钱包安全吗？","acceptedAnswer":{"@type":"Answer","text":"蓝牙只负责传输未签名的交易数据，私钥不出设备，签名在安全芯片内完成。风险主要在配对环节：只在可信环境配对，不 root/越狱的手机更稳妥。"}},
 {"@type":"Question","name":"二手硬件钱包能买吗？","acceptedAnswer":{"@type":"Answer","text":"绝不建议。二手设备可能被预置助记词或植入恶意固件。只从官网或官方授权渠道购买，收到后核验防拆封条并重置设备。"}},
-{"@type":"Question","name":"本篇评分是怎么算出来的？","acceptedAnswer":{"@type":"Answer","text":"采用加权评分：安全性35%、易用性20%、价格20%、开源透明度15%、中文支持10%。数据整理于2026-10-07，为公开参数横评，非上手实测；价格以官网实时为准。"}},
+{"@type":"Question","name":"本篇评分是怎么算出来的？","acceptedAnswer":{"@type":"Answer","text":"采用加权评分：安全性35%、易用性20%、价格20%、开源透明度15%、中文支持10%。数据整理于2026-11-18，为公开参数横评，非上手实测；价格以官网实时为准。"}},
 {"@type":"Question","name":"无种子（seedless）钱包靠谱吗？","acceptedAnswer":{"@type":"Answer","text":"Tangem、Cypherock 等采用分片或多卡备份替代传统助记词，降低了抄写丢失风险，但恢复逻辑依赖厂商方案。适合怕丢助记词的新手，大额资产仍建议传统助记词+钢板备份。"}}
 ]}
 </script>
@@ -94,14 +94,14 @@ html:not([lang="en"]) .en{display:none!important}
 <div class="hero">
 <h1><span class="zh">2026 硬件钱包横评：6 款热门冷钱包</span><span class="en">Best Hardware Wallets 2026: 6-Way Showdown</span></h1>
 <p><span class="zh">硬件钱包市场 2026 年规模约 7.2 亿美元并持续增长，新品集中在可审计安全芯片、无种子备份、抗盲签三个方向。我们按统一的加权标准给 6 款热门产品打分，帮你选出适合自己的那一款。</span><span class="en">The hardware-wallet market is about $720M in 2026 and growing, with new releases focused on auditable secure elements, seedless backup and anti-blind-signing. We scored 6 popular models on one weighted rubric to help you pick.</span></p>
-<span class="updated"><span class="zh">数据整理于 2026-10-07 · 参数横评（非实测）</span><span class="en">Data compiled 2026-10-07 · Spec-based comparison (not hands-on)</span></span>
+<span class="updated"><span class="zh">数据整理于 2026-11-18 · 参数横评（非实测）</span><span class="en">Data compiled 2026-11-18 · Spec-based comparison (not hands-on)</span></span>
 </div>
 
 <h2 class="sec"><span class="zh">⚡ 快速推荐</span><span class="en">⚡ Quick Picks</span></h2>
 <div class="picks">
-<div class="pick"><div class="k"><span class="zh">最佳综合</span><span class="en">Best overall</span></div><div class="v">Trezor Safe 7 <span class="score">8.8</span></div><p><span class="zh">可审计安全芯片 + 抗量子固件签名，2026 旗舰标杆。</span><span class="en">Auditable secure element + post-quantum firmware signing; the 2026 flagship benchmark.</span></p></div>
-<div class="pick"><div class="k"><span class="zh">最佳性价比</span><span class="en">Best value</span></div><div class="v">Keystone 3 Pro <span class="score">8.9</span></div><p><span class="zh">$149 的全隔离 QR 气隙方案，开源，对中文用户友好。</span><span class="en">$149 fully air-gapped QR solution, open-source, Chinese-user friendly.</span></p></div>
-<div class="pick"><div class="k"><span class="zh">最便宜入门</span><span class="en">Cheapest entry</span></div><div class="v">Tangem <span class="score">8.4</span></div><p><span class="zh">$59.9 的 NFC 卡片钱包，无种子，最适合送朋友入门。</span><span class="en">$59.90 NFC card wallet, seedless — the easiest gift for beginners.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">最佳综合</span><span class="en">Best overall</span></div><div class="v">Keystone 3 Pro <span class="score">8.9</span></div><p><span class="zh">$149 的全隔离 QR 气隙方案，开源，对中文用户友好——总分全场最高。</span><span class="en">$149 fully air-gapped QR solution, open-source, Chinese-user friendly — the highest total score of the six.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">安全与透明度最佳</span><span class="en">Best security &amp; transparency</span></div><div class="v">Trezor Safe 7 <span class="score">8.8</span></div><p><span class="zh">可审计安全芯片 + 抗量子固件签名，2026 旗舰标杆。</span><span class="en">Auditable secure element + post-quantum firmware signing; the 2026 flagship benchmark.</span></p></div>
+<div class="pick"><div class="k"><span class="zh">最便宜入门</span><span class="en">Cheapest entry</span></div><div class="v">Tangem <span class="score">8.4</span></div><p><span class="zh">$69.90 的 NFC 卡片钱包，无种子，最适合送朋友入门。</span><span class="en">$69.90 NFC card wallet, seedless — the easiest gift for beginners.</span></p></div>
 <div class="pick"><div class="k"><span class="zh">比特币极简派</span><span class="en">For Bitcoiners</span></div><div class="v">BitBox02 Nova <span class="score">8.4</span></div><p><span class="zh">EAL6+ 芯片，有纯比特币版本，攻击面最小。</span><span class="en">EAL6+ chip with a Bitcoin-only edition for minimal attack surface.</span></p></div>
 <div class="pick"><div class="k"><span class="zh">中文友好</span><span class="en">Chinese-friendly</span></div><div class="v">SafePal S1 Pro <span class="score">8.0</span></div><p><span class="zh">$89.99，完整中文支持，币安生态加持。</span><span class="en">$89.99, full Chinese support, Binance ecosystem backing.</span></p></div>
 <div class="pick"><div class="k"><span class="zh">生态最成熟</span><span class="en">Mature ecosystem</span></div><div class="v">Ledger Stax <span class="score">7.5</span></div><p><span class="zh">$399，E Ink 大屏 + 最成熟的配套应用，适合 Ledger 老用户。</span><span class="en">$399 E Ink display + the most mature companion app; for existing Ledger users.</span></p></div>
@@ -113,11 +113,11 @@ html:not([lang="en"]) .en{display:none!important}
 <tr><td><b>Trezor Safe 7</b></td><td>$249</td><td><span class="zh">TROPIC01 可审计安全芯片</span><span class="en">TROPIC01 auditable secure element</span></td><td><span class="zh">是</span><span class="en">Yes</span></td><td>Bluetooth 5.1 / USB-C</td><td><span class="score">8.8</span></td></tr>
 <tr><td><b>Keystone 3 Pro</b></td><td>$149</td><td><span class="zh">QR 气隙全隔离</span><span class="en">QR air-gapped</span></td><td><span class="zh">是</span><span class="en">Yes</span></td><td><span class="zh">二维码（无蓝牙/USB）</span><span class="en">QR only</span></td><td><span class="score">8.9</span></td></tr>
 <tr><td><b>Ledger Stax</b></td><td>$399</td><td><span class="zh">安全芯片（闭源固件）</span><span class="en">Secure element (closed firmware)</span></td><td><span class="zh">部分</span><span class="en">Partial</span></td><td>Bluetooth / USB-C</td><td><span class="score">7.5</span></td></tr>
-<tr><td><b>Tangem</b></td><td>$59.90</td><td><span class="zh">卡片芯片 · 无种子</span><span class="en">Card chip · seedless</span></td><td><span class="zh">部分</span><span class="en">Partial</span></td><td>NFC</td><td><span class="score">8.4</span></td></tr>
+<tr><td><b>Tangem</b></td><td>$69.90</td><td><span class="zh">卡片芯片 · 无种子</span><span class="en">Card chip · seedless</span></td><td><span class="zh">部分</span><span class="en">Partial</span></td><td>NFC</td><td><span class="score">8.4</span></td></tr>
 <tr><td><b>SafePal S1 Pro</b></td><td>$89.99</td><td><span class="zh">气隙二维码 + 自毁机制</span><span class="en">Air-gapped QR + self-destruct</span></td><td><span class="zh">否</span><span class="en">No</span></td><td><span class="zh">二维码</span><span class="en">QR</span></td><td><span class="score">8.0</span></td></tr>
-<tr><td><b>BitBox02 Nova</b></td><td>$201</td><td>EAL6+ <span class="zh">安全芯片</span><span class="en">secure chip</span></td><td><span class="zh">是</span><span class="en">Yes</span></td><td>USB-C</td><td><span class="score">8.4</span></td></tr>
+<tr><td><b>BitBox02 Nova</b></td><td>€175</td><td>EAL6+ <span class="zh">安全芯片</span><span class="en">secure chip</span></td><td><span class="zh">是</span><span class="en">Yes</span></td><td>USB-C</td><td><span class="score">8.4</span></td></tr>
 </table>
-<p class="note"><span class="zh">价格为厂商官网 2026-10-07 前后公开售价，促销与汇率会浮动，下单前请核实。</span><span class="en">Prices are public official-store prices around 2026-10-07; promos and FX fluctuate — verify before buying.</span></p>
+<p class="note"><span class="zh">价格为厂商官网 2026-11-18 前后公开售价，促销与汇率会浮动，下单前请核实。</span><span class="en">Prices are public official-store prices around 2026-11-18; promos and FX fluctuate — verify before buying.</span></p>
 
 <h2 class="sec"><span class="zh">🔎 逐款深评</span><span class="en">🔎 In-Depth Reviews</span></h2>
 
@@ -170,7 +170,7 @@ html:not([lang="en"]) .en{display:none!important}
 </div>
 
 <div class="review">
-<h3>3. Ledger Stax</h3><div class="rank"><span class="zh">综合排名 #5 · 生态最成熟</span><span class="en">Overall #5 · Most mature ecosystem</span></div>
+<h3>3. Ledger Stax</h3><div class="rank"><span class="zh">综合排名 #6 · 生态最成熟</span><span class="en">Overall #6 · Most mature ecosystem</span></div>
 <div class="scorebox"><div><div class="big">7.5</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.5 · 易用 9.5 · 价格 6.0 · 开源 4.0 · 中文 8.0</span><span class="en">Security 8.5 · Usability 9.5 · Price 6.0 · Openness 4.0 · Chinese 8.0</span></div></div>
 <div class="specs">
 <div><b>Best for</b><span class="zh">Ledger 老用户</span><span class="en">Existing Ledger users</span></div>
@@ -193,11 +193,11 @@ html:not([lang="en"]) .en{display:none!important}
 </div>
 
 <div class="review">
-<h3>4. Tangem</h3><div class="rank"><span class="zh">综合排名 #3 · 最便宜入门</span><span class="en">Overall #3 · Cheapest entry</span></div>
+<h3>4. Tangem</h3><div class="rank"><span class="zh">综合排名 #3（并列） · 最便宜入门</span><span class="en">Overall #3 (tie) · Cheapest entry</span></div>
 <div class="scorebox"><div><div class="big">8.4</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.0 · 易用 9.5 · 价格 9.5 · 开源 7.0 · 中文 7.5</span><span class="en">Security 8.0 · Usability 9.5 · Price 9.5 · Openness 7.0 · Chinese 7.5</span></div></div>
 <div class="specs">
 <div><b>Best for</b><span class="zh">新手入门 / 送礼</span><span class="en">Beginners / gifting</span></div>
-<div><b>Price</b>$59.90</div>
+<div><b>Price</b>$69.90</div>
 <div><b>Type</b>NFC <span class="zh">卡片钱包（无种子）</span><span class="en">card wallet (seedless)</span></div>
 <div><b>Connectivity</b>NFC</div>
 <div><b><span class="zh">特色</span><span class="en">Highlight</span></b><span class="zh">无助记词 · 多卡备份 · 手机碰一碰签名</span><span class="en">No seed phrase · multi-card backup · tap-to-sign</span></div>
@@ -205,7 +205,7 @@ html:not([lang="en"]) .en{display:none!important}
 <h4><span class="zh">亮点</span><span class="en">What stands out</span></h4>
 <ul>
 <li><span class="zh">没有助记词需要抄写——对"怕丢纸"的人是革命性体验。</span><span class="en">No seed phrase to write down — a revelation for anyone afraid of losing paper.</span></li>
-<li><span class="zh">$59.9 的价格让"一人多卡、异地备份"变得便宜。</span><span class="en">At $59.90, multi-card off-site backups become affordable.</span></li>
+<li><span class="zh">$69.90 的价格让"一人多卡、异地备份"变得便宜。</span><span class="en">At $69.90, multi-card off-site backups become affordable.</span></li>
 </ul>
 <h4><span class="zh">安全</span><span class="en">Security</span></h4>
 <ul><li><span class="zh">私钥分片存于卡片芯片；恢复逻辑依赖厂商方案，大额资产建议搭配传统助记词钱包。</span><span class="en">Keys live on card chips; recovery depends on the vendor's scheme — pair with a seed-based wallet for large holdings.</span></li></ul>
@@ -216,7 +216,7 @@ html:not([lang="en"]) .en{display:none!important}
 </div>
 
 <div class="review">
-<h3>5. SafePal S1 Pro</h3><div class="rank"><span class="zh">综合排名 #6 · 中文友好</span><span class="en">Overall #6 · Chinese-friendly</span></div>
+<h3>5. SafePal S1 Pro</h3><div class="rank"><span class="zh">综合排名 #5 · 中文友好</span><span class="en">Overall #5 · Chinese-friendly</span></div>
 <div class="scorebox"><div><div class="big">8.0</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 8.0 · 易用 8.0 · 价格 9.5 · 开源 5.0 · 中文 9.0</span><span class="en">Security 8.0 · Usability 8.0 · Price 9.5 · Openness 5.0 · Chinese 9.0</span></div></div>
 <div class="specs">
 <div><b>Best for</b><span class="zh">中文用户入门</span><span class="en">Chinese beginners</span></div>
@@ -239,11 +239,11 @@ html:not([lang="en"]) .en{display:none!important}
 </div>
 
 <div class="review">
-<h3>6. BitBox02 Nova</h3><div class="rank"><span class="zh">综合排名 #3 · 比特币极简派</span><span class="en">Overall #3 · Bitcoiner's pick</span></div>
+<h3>6. BitBox02 Nova</h3><div class="rank"><span class="zh">综合排名 #3（并列） · 比特币极简派</span><span class="en">Overall #3 (tie) · Bitcoiner's pick</span></div>
 <div class="scorebox"><div><div class="big">8.4</div><div class="lbl"><span class="zh">编辑评分 / 10</span><span class="en">Editor's score / 10</span></div></div><div class="lbl"><span class="zh">安全 9.5 · 易用 7.5 · 价格 8.0 · 开源 9.0 · 中文 6.0</span><span class="en">Security 9.5 · Usability 7.5 · Price 8.0 · Openness 9.0 · Chinese 6.0</span></div></div>
 <div class="specs">
 <div><b>Best for</b><span class="zh">比特币长期持有者</span><span class="en">Long-term Bitcoin holders</span></div>
-<div><b>Price</b>$201</div>
+<div><b>Price</b>€175 (~$196)</div>
 <div><b>Type</b>USB-C <span class="zh">硬件钱包</span><span class="en">hardware wallet</span></div>
 <div><b>Connectivity</b>USB-C</div>
 <div><b><span class="zh">特色</span><span class="en">Highlight</span></b>EAL6+ <span class="zh">芯片 · 有纯比特币版本 · 瑞士制造</span><span class="en">chip · Bitcoin-only edition · Swiss made</span></div>
@@ -263,7 +263,7 @@ html:not([lang="en"]) .en{display:none!important}
 
 <h2 class="sec"><span class="zh">⚖️ 评分方法</span><span class="en">⚖️ Scoring Methodology</span></h2>
 <div class="method">
-<p><span class="zh">每款产品按五个维度加权打分（满分 10 分）。数据整理于 <b>2026-10-07</b>，价格与供货以官网实时为准。本篇为公开参数横评，<b>非上手实测</b>——拿到真机后我们会更新实测结论。</span><span class="en">Each product is scored on five weighted dimensions (out of 10). Data compiled <b>2026-10-07</b>; prices per official sites. This is a spec-based comparison, <b>not hands-on testing</b> — we'll update with real-device findings when available.</span></p>
+<p><span class="zh">每款产品按五个维度加权打分（满分 10 分）。数据整理于 <b>2026-11-18</b>，价格与供货以官网实时为准。本篇为公开参数横评，<b>非上手实测</b>——拿到真机后我们会更新实测结论。</span><span class="en">Each product is scored on five weighted dimensions (out of 10). Data compiled <b>2026-11-18</b>; prices per official sites. This is a spec-based comparison, <b>not hands-on testing</b> — we'll update with real-device findings when available.</span></p>
 <table>
 <tr><th><span class="zh">维度</span><span class="en">Dimension</span></th><th><span class="zh">权重</span><span class="en">Weight</span></th><th><span class="zh">考察点</span><span class="en">What we check</span></th></tr>
 <tr><td><span class="zh">安全性</span><span class="en">Security</span></td><td>35%</td><td><span class="zh">安全芯片等级、气隙设计、防拆机制、历史安全事件</span><span class="en">Chip certification, air-gap design, tamper resistance, past incidents</span></td></tr>
@@ -281,7 +281,7 @@ html:not([lang="en"]) .en{display:none!important}
 <details><summary><span class="zh">带蓝牙的硬件钱包安全吗？</span><span class="en">Are Bluetooth hardware wallets safe?</span></summary><p><span class="zh">蓝牙只传输待签名的交易数据，私钥不出设备，签名在安全芯片内完成。主要风险在配对环节：只在可信环境配对，手机不 root/越狱更稳妥。</span><span class="en">Bluetooth only carries unsigned transaction data — keys never leave the device; signing happens in the secure chip. The main risk is pairing: pair only in trusted environments, and avoid rooted/jailbroken phones.</span></p></details>
 <details><summary><span class="zh">二手硬件钱包能买吗？</span><span class="en">Can I buy a second-hand hardware wallet?</span></summary><p><span class="zh">绝不建议。二手设备可能被预置助记词或植入恶意固件。只从官网或官方授权渠道购买，收到后检查防拆封条并重置设备。</span><span class="en">Never recommended. Used devices may come with pre-set seed phrases or tampered firmware. Buy only from official sites or authorized resellers; check tamper seals and reset the device on arrival.</span></p></details>
 <details><summary><span class="zh">无种子（seedless）钱包靠谱吗？</span><span class="en">Are seedless wallets trustworthy?</span></summary><p><span class="zh">Tangem、Cypherock 等用分片或多卡备份替代传统助记词，降低了抄写丢失风险，但恢复逻辑依赖厂商方案。适合怕丢助记词的新手；大额资产仍建议传统助记词 + 钢板备份。</span><span class="en">Tangem, Cypherock and peers replace seed phrases with sharded or multi-card backup — lower risk of losing paper, but recovery depends on the vendor's scheme. Good for beginners afraid of losing seeds; large holdings still deserve a classic seed + steel backup.</span></p></details>
-<details><summary><span class="zh">本篇评分是怎么算出来的？</span><span class="en">How are these scores calculated?</span></summary><p><span class="zh">加权评分：安全性 35%、易用性 20%、价格 20%、开源透明度 15%、中文支持 10%。数据整理于 2026-10-07，为公开参数横评。</span><span class="en">Weighted: Security 35%, Usability 20%, Price 20%, Openness 15%, Chinese support 10%. Data compiled 2026-10-07; spec-based comparison.</span></p></details>
+<details><summary><span class="zh">本篇评分是怎么算出来的？</span><span class="en">How are these scores calculated?</span></summary><p><span class="zh">加权评分：安全性 35%、易用性 20%、价格 20%、开源透明度 15%、中文支持 10%。数据整理于 2026-11-18，为公开参数横评。</span><span class="en">Weighted: Security 35%, Usability 20%, Price 20%, Openness 15%, Chinese support 10%. Data compiled 2026-11-18; spec-based comparison.</span></p></details>
 </div>
 
 <div class="hub">
@@ -292,7 +292,7 @@ html:not([lang="en"]) .en{display:none!important}
 
 </div>
 <footer><div class="wrap">
-<div class="disc"><span class="zh"><strong>信息披露：</strong>本篇含 Ledger、Tangem 返佣链接（通过链接购买本站可获得佣金，你的价格不受影响），其余为厂商官网直达链接。评分基于 2026-10-07 前后公开参数，不构成购买建议；价格与供货以官网实时为准。请只从官网或官方授权渠道购买硬件钱包。</span><span class="en"><strong>Disclosure:</strong> this review contains Ledger and Tangem affiliate links (purchases earn us a commission at no extra cost to you); other buttons link to official vendor sites. Scores use public specs around 2026-10-07 — not purchase advice. Buy hardware wallets only from official sites or authorized resellers.</span></div>
+<div class="disc"><span class="zh"><strong>信息披露：</strong>本篇含 Ledger、Tangem 返佣链接（通过链接购买本站可获得佣金，你的价格不受影响），其余为厂商官网直达链接。评分基于 2026-11-18 前后公开参数，不构成购买建议；价格与供货以官网实时为准。请只从官网或官方授权渠道购买硬件钱包。</span><span class="en"><strong>Disclosure:</strong> this review contains Ledger and Tangem affiliate links (purchases earn us a commission at no extra cost to you); other buttons link to official vendor sites. Scores use public specs around 2026-11-18 — not purchase advice. Buy hardware wallets only from official sites or authorized resellers.</span></div>
 <div style="margin-top:8px"><span class="zh">🔗 友情链接：<a href="https://aiee.neocities.org/guides/hardware-wallets">📖 英文版选购指南</a></span><span class="en">🔗 Links: <a href="https://aiee.neocities.org/guides/hardware-wallets">📖 English buyer's guide</a></span></div>
 <div>© 2026 <span class="zh">加密测评站</span><span class="en">Crypto Reviews</span> · <a href="/reviews/" style="color:var(--acc)">← <span class="zh">测评中心</span><span class="en">Review center</span></a></div>
 </div></footer>
